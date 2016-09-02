@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Highland';
+    src: url('../fonts/HighlandGothicFLF.ttf');
+}
+
+html, body {
+	font-family: Montserrat;
+	background: linear-gradient(
+		to bottom,
+		#D3D3D3,
+		rgb(41,128,185)
+	);
+}
+
+hr {
+	margin: 5px auto;
+	border-color: #D3D3D3;
+}
+
+h1 {
+	color: rgb(41,128,185);
+	font-size: 64px;
+}
+
+h2 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+p {
+	font-size: 16px;
+}
+
+.container {
+	margin: 50px auto;
+	height: 2700px;
+	background-color: white;
+	padding: 100px;
+	-webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+}
+
+.row {
+	margin-top: 25px;
+	margin-bottom: 75px;
+}
+
+#header {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#mySVG {
+	position: absolute;
+	z-index: 999;
+	margin-left: 110px;
+	margin-top: 180px;
+}
+
