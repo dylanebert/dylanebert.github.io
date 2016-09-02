@@ -13,7 +13,7 @@ html, body {
 	background: linear-gradient(
 		to bottom,
 		#D3D3D3,
-		rgb(41,128,185)
+		#2c3e50
 	);
 }
 
@@ -23,7 +23,7 @@ hr {
 }
 
 h1 {
-	color: rgb(41,128,185);
+	color: #2c3e50;
 	font-size: 64px;
 }
 
