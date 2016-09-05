@@ -117,6 +117,6 @@ var humanLangChart = new Chart(hlctx, {
 
 function myFunction() {
 	var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-	var draw = length * (scrollpercent + 0.05) * 0.75;
+	var draw = length * (scrollpercent + 0.05) * 0.5;
 	line.style.strokeDashoffset = length - draw;
 }
