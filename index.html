@@ -14,23 +14,23 @@
 	<body>
 		<div class="container p-x-2">		
 			<!--Scrolling line-->
-			<svg height="2000" width="900" class="visible-lg" id="mySVG">
-				<path fill="none" stroke="#D3D3D3" stroke-width="10" id="line-mute" d="M0 0 V400 H900 V825 H0 V2000 Z" />
-				<path fill="none" stroke="#34495e" stroke-width="10" id="line" d="M0 0 V400 H900 V825 H0 V2000 Z" />					
+			<svg height="3000" width="900" class="visible-lg" id="mySVG">
+				<path fill="none" stroke="#D3D3D3" stroke-width="10" id="line-mute" d="M0 0 V425 H850 V875 H0 V3000 Z" />
+				<path fill="none" stroke="#34495e" stroke-width="10" id="line" d="M0 0 V425 H850 V875 H0 V3000 Z" />					
 			</svg>
 			<div class="row" id="header">
 				<div class="col-lg-3">
-					<img src="img/profile.jpg" class="img-circle" style="width: 170px;">
+					<img src="img/profile.jpg" class="img-circle" style="width: 170px; display: block; margin: auto;">
 				</div>
 				<div class="col-lg-7">
 					<h1>Dylan Ebert</h1>
 					<hr>
-					<p>A person who does things</p>
+					<p>Computer Science Student</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-2"></div>
-				<div class="col-lg-10">
+				<div class="col-lg-8">
 					<h2>About</h2>
 					<!--Name-->
 					<h3>Full Name</h3>
@@ -48,7 +48,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-2"></div>
-				<div class="col-lg-10">
+				<div class="col-lg-8">
 					<h2>Education</h2>
 					<!--UTA-->
 					<h3>The University of Texas At Arlington</h3>
@@ -58,7 +58,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-2"></div>
-				<div class="col-lg-10">
+				<div class="col-lg-8">
 					<h2>Experience</h2>
 					<!--Heracleia-->
 					<h3>Heracleia Human-Centered Computing Lab</h3>
@@ -68,25 +68,25 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-2"></div>
-				<div class="col-lg-10">
+				<div class="col-lg-8">
 					<h2>Technical Skills</h2>
-					<!--Applications-->
+					<!--Applications-->					
 					<h3>Applications</h3>
 					<hr>
-					<p>Unity, Blender, Photoshop, Matlab, Node, SPSS, Visual Studio, MongoDB<p>
+					<canvas id="techSkillsChart" width="400" height="200"></canvas>
 					<!--Programming Languages-->
 					<h3>Programming Languages</h3>
 					<hr>
-					<p>C#, Python, Java, C, C++, Javascript/NodeJS, CSS, SQ</p>
+					<canvas id="progLangChart" width="400" height="200"></canvas>
 					<!--Human Languages-->
 					<h3>Human Languages</h3>
 					<hr>
-					<p>English (native), Swedish (fluent), German and Dutch (intermediate)</p>
+					<canvas id="humanLangChart" width="400" height="100"></canvas>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-2"></div>
-				<div class="col-lg-10">
+				<div class="col-lg-8">
 					<h2>Publications</h2>
 					<!--Publications-->
 					<ul class="list-group">
@@ -101,13 +101,14 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-2"></div>
-				<div class="col-lg-10">
+				<div class="col-lg-8">
 					<h2>Contact</h2>
 					<!--Contact-->
 					<a href="dylan.ebert@gmail.com"><p>dylan.ebert@gmail.com</p></a>					
 				</div>
 			</div>
 		</div>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
 	<script src="js/index.js"></script>
 	</body>
 </html>
