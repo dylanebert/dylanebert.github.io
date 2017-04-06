@@ -1,116 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Dylan Ebert - Web Resume</title>
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="icon" type="image/png" href="favicon.png" sizes="48x48">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Oswald" rel="stylesheet">
-		<link href="css/index.css" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-	</head>
-	<body>
-		<div class="container p-x-2">		
-			<!--Scrolling line-->
-			<svg height="2800" width="900" class="visible-lg" id="mySVG">
-				<path fill="none" stroke="#D3D3D3" stroke-width="10" id="line-mute" d="M5 0 V2800 Z" />
-				<path fill="none" stroke="#34495e" stroke-width="10" id="line" d="M5 0 V2800 Z" />					
-			</svg>
-			<div class="row" id="header">
-				<div class="col-lg-3">
-					<img src="img/profile.jpg" class="img-circle" style="width: 170px; display: block; margin: auto;">
-				</div>
-				<div class="col-lg-7">
-					<h1>Dylan Ebert</h1>
-					<hr>
-					<p>Computer Science Student</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-2"></div>
-				<div class="col-lg-8">
-					<h2>About</h2>
-					<!--Name-->
-					<h3>Full Name</h3>
-					<hr>
-					<p>Dylan Ebert<p>
-					<!--Born-->
-					<h3>Born</h3>
-					<hr>
-					<p>02 May 1995 - Arlington, TX, USA</p>
-					<!--Email-->
-					<h3>Email</h3>
-					<hr>
-					<p>dylan.ebert@gmail.com</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-2"></div>
-				<div class="col-lg-8">
-					<h2>Education</h2>
-					<!--UTA-->
-					<h3>The University of Texas At Arlington</h3>
-					<hr>
-					<p>Bachelor of Science in Computer Science - <i><span class="text-muted">2013-Present</i><p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-2"></div>
-				<div class="col-lg-8">
-					<h2>Experience</h2>
-					<!--Heracleia-->
-					<h3>Heracleia Human-Centered Computing Lab</h3>
-					<hr>
-					<p>Research Assistant - <i><span class="text-muted">2014-Present</i><p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-2"></div>
-				<div class="col-lg-8">
-					<h2>Technical Skills</h2>
-					<!--Applications-->					
-					<h3>Applications</h3>
-					<hr>
-					<canvas id="techSkillsChart" width="400" height="200"></canvas>
-					<!--Programming Languages-->
-					<h3>Programming Languages</h3>
-					<hr>
-					<canvas id="progLangChart" width="400" height="200"></canvas>
-					<!--Human Languages-->
-					<h3>Human Languages</h3>
-					<hr>
-					<canvas id="humanLangChart" width="400" height="100"></canvas>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-2"></div>
-				<div class="col-lg-8">
-					<h2>Publications</h2>
-					<!--Publications-->
-					<ul class="list-group">
-						<li class="list-group-item"><b>D. Ebert</b>, S. Gupta, and F. Makedon, ”Ogma - A Virtual Reality Language Acquisition System,” Proceedings of the 9th ACM International Conference on PErvasive Technologies Related to Assistive Environments - PETRA ’16, 2016</li>
-						<li class="list-group-item"><b>D. Ebert</b>, E. Becker, and F. Makedon, ”Assessing MyArms: A Novel System for Immersive VR Interaction,” Proceedings of the 2016 ASEE Gulf-Southwest Section Annual Conference - ASEE-GSW ’16</li>
-						<li class="list-group-item"><b>D. Ebert</b>, V. Metsis, and F. Makedon, Development and evaluation of a unity-based, kinect-controlled avatar for physical rehabilitation, - PETRA ’15</li>
-						<li class="list-group-item">K. Tsiakas, M. Papakostas, B. Chebaa, <b>D. Ebert</b>, V. Karkaletsis, and F. Makedon, ”An Interactve Learning and Adaptation Framework for Adaptive Robot Assisted Therapy,” - PETRA ’16</li>
-						<li class="list-group-item">B. Chebaa, A. Lioulemes, M. Abujelala, <b>D. Ebert</b>, S. Phan, E. Becker, and F. Makedon, ”Multimodal Analysis of Serious Games for Cognitive and Physiological Assessment,” - PETRA ’16</li>
-						<li class="list-group-item">A. Kalaivani, A. Mullapudi, <b>D. Ebert</b>, N. Phadnis, and R. Middha, ”HTKS Game for executive function disorders using NAO Robot” - PETRA ’16</li>
-					</ul>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-2"></div>
-				<div class="col-lg-8">
-					<h2>Contact</h2>
-					<!--Contact-->
-					<a href="mailto:dylan.ebert@gmail.com"><p>dylan.ebert@gmail.com</p></a>					
-				</div>
-			</div>
-		</div>	
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dylan Ebert</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
-	<script src="js/index.js"></script>
-	</body>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" type="image/png" href="favicon.png" sizes="48x48">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Oswald" rel="stylesheet">
+</head>
+<style>
+.container {
+	padding: 50px 0; 
+	background-color: white;
+	-webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+}
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	background: linear-gradient(
+		to bottom,
+		#D3D3D3,
+		#34495e
+	);
+}
+hr {
+	margin: 5px auto;
+	border-color: #D3D3D3;
+}
+h1 {
+	font-size: 64px;
+	font-weight: bold;
+	font-family: 'Oswald', sans-serif; 
+}
+h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'Oswald', sans-serif;
+}
+p {
+	font-size: 1.4em;
+}
+.header {
+	text-align: center;
+}
+.section {
+	padding: 25px 50px;
+}
+@media (max-width: 480px) {
+	.section {
+		padding: 25px 10px;
+	}
+}
+</style>
+<body>
+	<div class="container">		
+		<div class="header">
+			<img src="profile.png" class="img-circle" style="width: 170px; display: block; margin: auto;">
+			<h1>Dylan Ebert</h1>
+			<hr>
+			<p>Undergraduate HCI Researcher / Computer Science Student</p>
+		</div>
+		<div class="section">
+			<h2>About</h2>
+			<p><b>Full Name:</b> Dylan Ebert</p>
+			<hr>
+			<p><b>Born:</b> 02 May 1995 - Arlington, TX</p>
+			<hr>
+			<p><b>Email</b> <a href="mailto:dylan.ebert@gmail.com">dylan.ebert@gmail.com</a></p>
+		</div>
+		<div class="section">
+			<h2>Education</h2>
+			<!--UTA-->
+			<h3><a href="http://www.uta.edu" target="_blank">The University of Texas At Arlington</a></h3>
+			<hr>
+			<p>Bachelor of Science in Computer Science - <i><span class="text-muted">Fall 2013-Present</i><p>
+		</div>
+		<div class="section">
+			<h2>Experience</h2>
+			<!--Heracleia-->
+			<h3><a href="https://heracleia.uta.edu/" target="_blank">Heracleia Human-Centered Computing Lab</a></h3>
+			<hr>
+			<p>Undergraduate Researcher - <i><span class="text-muted">Summer 2014-Present</i><p>
+		</div>
+		<div class="section">
+			<h2>Technical Skills</h2>
+			<!--Applications-->					
+			<h3>Applications</h3>
+			<canvas id="techSkillsChart" width="400" height="150"></canvas>
+			<!--Programming Languages-->
+			<h3>Programming Languages</h3>
+			<canvas id="progLangChart" width="400" height="100"></canvas>
+			<!--Human Languages-->
+			<h3>Human Languages</h3>
+			<canvas id="humanLangChart" width="400" height="100"></canvas>
+		</div>
+		<div class="section">
+			<h2 style="margin-bottom: 5px;">Publications</h2>
+			<p class="text-muted">(They're all links)</p>
+			<!--Publications-->
+			<ul class="list-group">
+				<a class="list-group-item" href="https://www.researchgate.net/publication/314179286_CogniLearn_A_Deep_Learning-based_Interface_for_Cognitive_Behavior_Assessment" target="_blank"><p>CogniLearn: A Deep Learning-Based Interface for Cognitive Behavior Assessment; IUI '17<p class="text-success">Awarded Best Student Paper</p></p></a>
+				<a class="list-group-item" href="http://dl.acm.org/citation.cfm?id=2910681&dl=ACM&coll=DL&CFID=747569923&CFTOKEN=48517767" target="_blank"><p>Ogma - A Virtual Reality Language Acquisition System; PETRA ’16, 2016</p></a>
+				<a class="list-group-item" href="http://dl.acm.org/citation.cfm?id=2769556" target="_blank"><p>Development and evaluation of a unity-based, kinect-controlled avatar for physical rehabilitation; PETRA ’15</p></a>
+				<a class="list-group-item" href="http://dl.acm.org/citation.cfm?id=2769556" target="_blank"><p>An Interactve Learning and Adaptation Framework for Adaptive Robot Assisted Therapy; PETRA ’16</p></a>
+				<a class="list-group-item" href="http://dl.acm.org/citation.cfm?doid=2910674.2935833" target="_blank"><p>Multimodal Analysis of Serious Games for Cognitive and Physiological Assessment; PETRA ’16</p></a>
+				<a class="list-group-item" href="http://dl.acm.org/citation.cfm?doid=2910674.2935854" target="_blank"><p>HTKS Game for executive function disorders using NAO Robot; PETRA ’16</p></a>
+			</ul>
+		</div>
+	</div>
+</body>
+<script>
+var tsctx = $('#techSkillsChart');
+var plctx = $('#progLangChart');
+var hlctx = $('#humanLangChart');
+var techSkillsChart = new Chart(tsctx, {
+	type: 'horizontalBar',
+	data: {
+		labels: ['Unity', 'Blender', 'Photoshop', 'Matlab', 'SPSS', 'Visual Studio', 'MongoDB'],
+		datasets: [{
+			label: '',
+			data: [90, 80, 70, 80, 50, 60, 60],
+			backgroundColor: [
+				'rgb(52, 73, 94)',
+                'rgb(52, 152, 219)',
+				'rgb(26, 188, 156)',
+				'rgb(52, 73, 94)',
+                'rgb(52, 152, 219)',
+				'rgb(26, 188, 156)',
+				'rgb(52, 73, 94)',
+                'rgb(52, 152, 219)',
+				'rgb(26, 188, 156)',
+				'rgb(52, 73, 94)',
+			]
+		}],
+	},
+	options: {
+		scales: {
+			xAxes: [{
+				ticks: {
+					min: 0,
+					max: 100,
+					stepSize: 20
+				}
+			}]
+		},
+		legend: {
+			display: false
+		}
+	}
+});
+var progLangChart = new Chart(plctx, {
+	type: 'horizontalBar',
+	data: {
+		labels: ['C#', 'Python', 'Java', 'C', 'Node/JS'],
+		datasets: [{
+			label: '',
+			data: [80, 90, 70, 50, 100],
+			backgroundColor: [
+				'rgb(52, 73, 94)',
+                'rgb(52, 152, 219)',
+				'rgb(26, 188, 156)',
+				'rgb(52, 73, 94)',
+                'rgb(52, 152, 219)'
+			]
+		}],
+	},
+	options: {
+		scales: {
+			xAxes: [{
+				ticks: {
+					min: 0,
+					max: 100,
+					stepSize: 20
+				}
+			}]
+		},
+		legend: {
+			display: false
+		}
+	}
+});
+var humanLangChart = new Chart(hlctx, {
+	type: 'horizontalBar',
+	data: {
+		labels: ['English', 'Swedish', 'German', 'Dutch'],
+		datasets: [{
+			label: '',
+			data: [100, 90, 40, 35],
+			backgroundColor: [
+				'rgb(52, 73, 94)',
+                'rgb(52, 152, 219)',
+				'rgb(26, 188, 156)',
+				'rgb(52, 73, 94)'
+			]
+		}],
+	},
+	options: {
+		scales: {
+			xAxes: [{
+				ticks: {
+					min: 0,
+					max: 100,
+					stepSize: 20
+				}
+			}]
+		},
+		legend: {
+			display: false
+		}
+	}
+});
+</script>
 </html>
