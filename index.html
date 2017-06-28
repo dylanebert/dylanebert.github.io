@@ -67,35 +67,39 @@ p {
 			<img src="profile.png" class="img-circle" style="width: 170px; display: block; margin: auto;">
 			<h1>Dylan Ebert</h1>
 			<hr>
-			<p>Undergraduate HCI Researcher / Computer Science Student</p>
+			<p>Computer Science Student</p>
 		</div>
 		<div class="section">
 			<h2>About</h2>
 			<p><b>Full Name:</b> Dylan Ebert</p>
 			<hr>
-			<p><b>Born:</b> 02 May 1995 - Arlington, TX</p>
+			<p><b>Born:</b> 02 May 1995 - Arlington, Texas, USA</p>
 			<hr>
 			<p><b>Email:</b> <a href="mailto:dylan.ebert@gmail.com">dylan.ebert@gmail.com</a></p>
 		</div>
 		<div class="section">
 			<h2>Education</h2>
+			<!--Brown University-->
+			<h3><a href="http://www.brown.edu" target="_blank">Brown University</a></h3>
+			<hr>
+			<p>PhD in Computer Science - <i><span class="text-muted">Fall 2017-Present</i></p>
 			<!--UTA-->
 			<h3><a href="http://www.uta.edu" target="_blank">The University of Texas At Arlington</a></h3>
 			<hr>
-			<p>Bachelor of Science in Computer Science - <i><span class="text-muted">Fall 2013-Present</i><p>
+			<p>Bachelor of Science in Computer Science - <i><span class="text-muted">Fall 2013-Spring 2017</i><p>
 		</div>
 		<div class="section">
 			<h2>Experience</h2>
 			<!--Heracleia-->
 			<h3><a href="https://heracleia.uta.edu/" target="_blank">Heracleia Human-Centered Computing Lab</a></h3>
 			<hr>
-			<p>Undergraduate Researcher - <i><span class="text-muted">Summer 2014-Present</i><p>
+			<p>Undergraduate Researcher (REU) - <i><span class="text-muted">Summer 2014-Summer 2017</i><p>
 		</div>
 		<div class="section">
 			<h2>Technical Skills</h2>
 			<!--Applications-->					
 			<h3>Applications</h3>
-			<canvas id="techSkillsChart" width="400" height="150"></canvas>
+			<canvas id="techSkillsChart" width="400" height="100"></canvas>
 			<!--Programming Languages-->
 			<h3>Programming Languages</h3>
 			<canvas id="progLangChart" width="400" height="100"></canvas>
@@ -111,9 +115,7 @@ p {
 				<a class="list-group-item" href="https://www.researchgate.net/publication/314179286_CogniLearn_A_Deep_Learning-based_Interface_for_Cognitive_Behavior_Assessment" target="_blank"><p>CogniLearn: A Deep Learning-Based Interface for Cognitive Behavior Assessment; IUI '17<p class="text-success">Awarded Best Student Paper</p></p></a>
 				<a class="list-group-item" href="http://dl.acm.org/citation.cfm?id=2910681&dl=ACM&coll=DL&CFID=747569923&CFTOKEN=48517767" target="_blank"><p>Ogma - A Virtual Reality Language Acquisition System; PETRA ’16, 2016</p></a>
 				<a class="list-group-item" href="http://dl.acm.org/citation.cfm?id=2769556" target="_blank"><p>Development and evaluation of a unity-based, kinect-controlled avatar for physical rehabilitation; PETRA ’15</p></a>
-				<a class="list-group-item" href="http://dl.acm.org/citation.cfm?id=2769556" target="_blank"><p>An Interactve Learning and Adaptation Framework for Adaptive Robot Assisted Therapy; PETRA ’16</p></a>
 				<a class="list-group-item" href="http://dl.acm.org/citation.cfm?doid=2910674.2935833" target="_blank"><p>Multimodal Analysis of Serious Games for Cognitive and Physiological Assessment; PETRA ’16</p></a>
-				<a class="list-group-item" href="http://dl.acm.org/citation.cfm?doid=2910674.2935854" target="_blank"><p>HTKS Game for executive function disorders using NAO Robot; PETRA ’16</p></a>
 			</ul>
 		</div>
 	</div>
@@ -125,10 +127,10 @@ var hlctx = $('#humanLangChart');
 var techSkillsChart = new Chart(tsctx, {
 	type: 'horizontalBar',
 	data: {
-		labels: ['Unity', 'Blender', 'Photoshop', 'Matlab', 'SPSS', 'Visual Studio', 'MongoDB'],
+		labels: ['Unity', 'Blender', 'Photoshop', 'Matlab', 'SPSS'],
 		datasets: [{
 			label: '',
-			data: [90, 80, 70, 80, 50, 60, 60],
+			data: [90, 80, 70, 80, 50],
 			backgroundColor: [
 				'rgb(52, 73, 94)',
                 'rgb(52, 152, 219)',
@@ -138,8 +140,6 @@ var techSkillsChart = new Chart(tsctx, {
 				'rgb(26, 188, 156)',
 				'rgb(52, 73, 94)',
                 'rgb(52, 152, 219)',
-				'rgb(26, 188, 156)',
-				'rgb(52, 73, 94)',
 			]
 		}],
 	},
@@ -156,7 +156,8 @@ var techSkillsChart = new Chart(tsctx, {
 		legend: {
 			display: false
 		}
-	}
+	},
+	showTooltips: false
 });
 var progLangChart = new Chart(plctx, {
 	type: 'horizontalBar',
@@ -164,7 +165,7 @@ var progLangChart = new Chart(plctx, {
 		labels: ['C#', 'Python', 'Java', 'C', 'Node/JS'],
 		datasets: [{
 			label: '',
-			data: [80, 90, 70, 50, 100],
+			data: [80, 90, 70, 50, 90],
 			backgroundColor: [
 				'rgb(52, 73, 94)',
                 'rgb(52, 152, 219)',
