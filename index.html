@@ -177,12 +177,10 @@ $(window).on('load', function() {
 	var brownTween = TweenMax.fromTo('#brown', .5, {opacity: 0}, {opacity: 1});
 	var sceneBrown = new ScrollMagic.Scene({triggerElement: '#brown', triggerHook: .9})
 					.setTween(brownTween)
-					.addIndicators({name: 'brown'})
 					.addTo(controller);
 	var utaTween = TweenMax.fromTo('#uta', .5, {opacity: 0}, {opacity: 1});
 	var sceneUTA = new ScrollMagic.Scene({triggerElement: '#uta', triggerHook: .9})
 					.setTween(utaTween)
-					.addIndicators({name: 'uta'})
 					.addTo(controller);
 
 	TweenMax.fromTo($('#header h1'), .5, {opacity: 0, scale: .95}, {opacity: 1, scale: 1, ease: Power1.easeOut});
