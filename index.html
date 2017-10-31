@@ -173,6 +173,9 @@ a:hover, a:focus, a:target {
 </body>
 <script>
 $(window).on('load', function() {
+	//hide the address bar
+	window.scrollTo(0, 1);
+
 	var controller = new ScrollMagic.Controller();
 	var brownTween = TweenMax.fromTo('#brown', .5, {opacity: 0}, {opacity: 1});
 	var sceneBrown = new ScrollMagic.Scene({triggerElement: '#brown', triggerHook: .9})
