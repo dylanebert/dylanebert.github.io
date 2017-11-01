@@ -51,9 +51,12 @@ a:hover, a:focus, a:target {
 	width: 20em;
 	height: auto;
 	margin: 0 auto;
+	opacity: 0;
 }
 #header h1 {
 	line-height: 2.5em;
+	opacity: 0;
+	transform: scale(.95);
 }
 #header h1:after {
 	height: 2px;
@@ -67,6 +70,7 @@ a:hover, a:focus, a:target {
 	letter-spacing: .125em;
 	font-size: 1.25em;
 	padding-top: 1.5em;
+	opacity: 0;
 }
 #more {
 	text-transform: uppercase;
@@ -79,6 +83,7 @@ a:hover, a:focus, a:target {
 	left: 50%;
 	width: 16em;
 	margin-left: -8em;
+	opacity: 0;
 }
 #more:after {
 	background-image: url('arrow.svg');
@@ -108,8 +113,12 @@ a:hover, a:focus, a:target {
 	padding: 4em 4em;
 	overflow: hidden;
 }
-.col-lg-5 {
+.col-left {
 	text-align: center;
+}
+.col-right {
+	padding: 4em 2em;
+	max-width: 60%;
 }
 .spotlight .image {
 	width: 40%;
@@ -173,6 +182,58 @@ a:hover, a:focus, a:target {
 .footer p a {
 	color: white;
 }
+.youtube {
+	background-color: black;
+	overflow: hidden;
+	cursor: pointer;
+	width: 560px;
+	height: 315px;
+	padding-top: 56.25%;
+	position: relative;
+}
+.youtube img {
+	width: 100%;
+	top: -17%;
+	opacity: 0.7;
+	left: 0;
+}
+.youtube .play-button {
+	width: 90px;
+	height: 60px;
+	background-color: #333;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+	z-index: 1;
+	opacity: .8;
+	border-radius: 6px;
+}
+.youtube .play-button:before {
+    content: "";
+    border-style: solid;
+    border-width: 15px 0 15px 26.0px;
+    border-color: transparent transparent transparent #fff;
+}
+.youtube img,
+.youtube .play-button {
+    cursor: pointer;
+}
+.youtube img,
+.youtube iframe,
+.youtube .play-button,
+.youtube .play-button:before {
+    position: absolute;
+}
+.youtube .play-button,
+.youtube .play-button:before {
+    top: 50%;
+    left: 50%;
+    transform: translate3d( -50%, -50%, 0 );
+}
+.youtube iframe {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
 </style>
 <body>
 <div id="wrapper">
@@ -224,32 +285,36 @@ a:hover, a:focus, a:target {
 			<h1>Recent Projects</h1>
 		</div>
 		<div class="row" id="vizdom">
-			<div class="col-lg-5">
-				<video width="560" width="315" controls>
+			<div class="col-left">
+				<video width="560" width="315" controls="controls" preload="none">
 					<source src="vizdom_v1.0.mp4" type="video/mp4">
 				</video>
 			</div>
-			<div class="col-lg-7">
+			<div class="col-right">
 				<p class="content-title text-muted">Vizdom: Interactice Analytics through Pen and Touch</p>
 				<p class="content-body">A project I have recently joined - an interface for machine learning and advanced statistics on large datasets, at interactive speeds, accessible by the novice user.</p>
 				<a href="http://cs.brown.edu/research/ptc/vizdom/vizdom.pdf" target="_blank">[paper]</a>
 			</div>
 		</div>
 		<div class="row" id="ogma">
-			<div class="col-lg-5">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/L7jmqMlYO8o" frameborder="0" allowfullscreen></iframe>
+			<div class="col-left"> 
+				<div class="youtube" data-embed="L7jmqMlYO8o">
+					<div class="play-button"></div>
+				</div>
 			</div>
-			<div class="col-lg-7">
+			<div class="col-right">
 				<p class="content-title text-muted">Ogma - A Virtual Reality Language Acquisition System</p>
 				<p class="content-body">One of my favorite projects - virtual reality language learning. I programmed the system and authored the paper.</p>
 				<a href="http://delivery.acm.org/10.1145/2920000/2910681/a66-Ebert.pdf?ip=128.148.231.11&id=2910681&acc=ACTIVE%20SERVICE&key=7777116298C9657D%2EDD490426617BA903%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=1000772772&CFTOKEN=67343223&__acm__=1509498964_751a2627442abf94818be59bcbf6488a" target="_blank">[paper]</a>
 			</div>
 		</div>
 		<div class="row" id="hskt">
-			<div class="col-lg-5">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/lkSk1pCzXHM" frameborder="0" allowfullscreen></iframe>
+			<div class="col-left">
+				<div class="youtube" data-embed="lkSk1pCzXHM">
+					<div class="play-button"></div>
+				</div>
 			</div>
-			<div class="col-lg-7">
+			<div class="col-right">
 				<p class="content-title text-muted">CogniLearn: A Deep Learning-based Interface for Cognitive Behavior Assessment</p>
 				<p class="content-body">Award-winning paper at IUI 2017 - combining interfaces, psychology and deep learning. I built the interface and co-authored the paper.</p>
 				<a href="http://delivery.acm.org/10.1145/3030000/3025213/p577-gattupalli.pdf?ip=128.148.231.11&id=3025213&acc=ACTIVE%20SERVICE&key=7777116298C9657D%2EDD490426617BA903%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=1000772772&CFTOKEN=67343223&__acm__=1509500407_386604a49da483a07c4a239e2fcdabe0" target="_blank">[paper]</a>
@@ -303,16 +368,38 @@ $(window).on('load', function() {
 	var scene = new ScrollMagic.Scene({triggerElement: '#hskt', triggerHook: .9})
 					.setTween(tween)
 					.addTo(controller);
+	var tween = TweenMax.from('.footer p', 1.5, {opacity: 0, 'margin-right': '10em', ease: Bounce.easeOut});
+	var scene = new ScrollMagic.Scene({triggerElement: '.footer p', triggerHook: .9})
+					.setTween(tween)
+					.addTo(controller);
 
-	TweenMax.from($('#header h1'), .5, {opacity: 0, scale: .95, ease: Power1.easeOut});
+	TweenMax.to($('#header h1'), .5, {opacity: 1, scale: 1, ease: Power1.easeOut});
 	TweenMax.to(CSSRulePlugin.getRule('#header h1:after'), .5, {cssRule:{width: '100%'}, delay: .5});
-	TweenMax.from($('#header img'), .5, {opacity: 0, ease: Power1.easeOut, delay: .5});
-	TweenMax.from($('#header p'), .5, {opacity: 0, ease: Power1.easeOut, delay: 1});
-	TweenMax.from($('#more'), .5, {opacity: 0, ease: Power1.easeOut, delay: 1.5});
+	TweenMax.to($('#header img'), .5, {opacity: 1, ease: Power1.easeOut, delay: .5});
+	TweenMax.to($('#header p'), .5, {opacity: 1, ease: Power1.easeOut, delay: 1});
+	TweenMax.to($('#more'), .5, {opacity: 1, ease: Power1.easeOut, delay: 1.5});
 	
 	$('#more').click(function() {
 		TweenMax.to(window, 1.5, {scrollTo: '#education', ease: Power2.easeOut});
 	});
+	
+	var $vids = $('.youtube');
+	for(var i = 0; i < $vids.length; i++) {
+		var source = 'https://img.youtube.com/vi/' + $vids[i].dataset.embed + '/sddefault.jpg';
+		var img = new Image();
+		img.src = source;
+		img.addEventListener('load', function() {
+			$vids[i].appendChild(img);
+		}(i));
+		$vids[i].addEventListener('click', function() {
+			var iframe = document.createElement('iframe');
+			iframe.setAttribute( "frameborder", "0" );
+            iframe.setAttribute( "allowfullscreen", "" );
+            iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+			this.innerHTML = '';
+			this.appendChild(iframe);
+		});
+	}
 });
 </script>
 </html>
