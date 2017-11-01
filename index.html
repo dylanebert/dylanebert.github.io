@@ -20,7 +20,6 @@ body {
 	font-weight: 400;
 	letter-spacing: 0.075em;
 	line-height: 1.65em;
-	color: white;
 }
 div {
 	display: block;
@@ -49,6 +48,12 @@ a:hover, a:focus, a:target {
 	justify-content: center;
 	height: 100vh;
 	background: #141414;
+	color: white;
+}
+#header img {
+	width: 20em;
+	height: auto;
+	margin: 0 auto;
 }
 #header h1 {
 	line-height: 2.5em;
@@ -97,6 +102,7 @@ a:hover, a:focus, a:target {
 	justify-content: center;
 	align-items: center;
 	padding: 4em 4em;
+	overflow: hidden;
 }
 .spotlight .image {
 	width: 40%;
@@ -142,6 +148,7 @@ a:hover, a:focus, a:target {
 <body>
 <div id="wrapper">
 	<div id="header" class="container-fluid">
+		<img class="img-circle" src="me.jpeg">
 		<h1>Dylan Ebert</h1>
 		<p>PhD Student | Brown University</p>
 		<a id="more">More Info</a>
@@ -169,6 +176,20 @@ a:hover, a:focus, a:target {
 			</div>
 		</div>
 	</section>
+	<section id="work">
+		<div class="section-header">
+			<h1>Work Experience</h1>
+		</div>
+		<div class="spotlight" id="heracleia">
+			<div class="image">
+				<h2>Heracleia Human-Centered Computing Lab</h2>
+			</div>
+			<div class="content">
+				<p class="content-title text-muted">Undergraduate Research Assistant | 2014 - 2017</p>
+				<p class="content-body">Worked on various HCI projects involving VR, mobile, rehabilitation, and robotics. Authored and published papers. Three-time PETRA conference presenter.</p>
+			</div>
+		</div>
+	</section>
 </div>
 </body>
 <script>
@@ -177,19 +198,31 @@ $(window).on('load', function() {
 	window.scrollTo(0, 1);
 
 	var controller = new ScrollMagic.Controller();
-	var brownTween = TweenMax.fromTo('#brown', .5, {opacity: 0}, {opacity: 1});
-	var sceneBrown = new ScrollMagic.Scene({triggerElement: '#brown', triggerHook: .9})
+	var educationTween = TweenMax.from('#education .section-header h1', 1, {'margin-left': '5em', opacity: 0, ease: Sine.easeOut});
+	var scene = new ScrollMagic.Scene({triggerElement: '#education', triggerHook: .9})
+					.setTween(educationTween)
+					.addTo(controller);
+	var brownTween = TweenMax.from('#brown', 1.5, {opacity: 0, ease: Sine.easeOut});
+	var scene = new ScrollMagic.Scene({triggerElement: '#brown', triggerHook: .9})
 					.setTween(brownTween)
 					.addTo(controller);
-	var utaTween = TweenMax.fromTo('#uta', .5, {opacity: 0}, {opacity: 1});
-	var sceneUTA = new ScrollMagic.Scene({triggerElement: '#uta', triggerHook: .9})
+	var utaTween = TweenMax.from('#uta', 1.5, {opacity: 0, ease: Sine.easeOut});
+	var scene = new ScrollMagic.Scene({triggerElement: '#uta', triggerHook: .9})
 					.setTween(utaTween)
 					.addTo(controller);
+	var workTween = TweenMax.from('#work .section-header h1', 1, {'margin-left': '5em', opacity: 0, ease: Sine.easeOut});
+	var scene = new ScrollMagic.Scene({triggerElement: '#work', triggerHook: .9})
+					.setTween(workTween)
+					.addTo(controller);
+	var heracleiaTween = TweenMax.from('#heracleia', 1.5, {opacity: 0, ease: Sine.easeOut});
+	var scene = new ScrollMagic.Scene({triggerElement: '#heracleia', triggerHook: .9})
+					.setTween(heracleiaTween)
+					.addTo(controller);
 
-	TweenMax.fromTo($('#header h1'), .5, {opacity: 0, scale: .95}, {opacity: 1, scale: 1, ease: Power1.easeOut});
+	TweenMax.from($('#header h1'), .5, {opacity: 0, scale: .95, ease: Power1.easeOut});
 	TweenMax.to(CSSRulePlugin.getRule('#header h1:after'), .5, {cssRule:{width: '100%'}, delay: .5});
-	TweenMax.fromTo($('#header p'), .5, {opacity: 0}, {opacity: 1, ease: Power1.easeOut, delay: 1});
-	TweenMax.fromTo($('#more'), .5, {opacity: 0}, {opacity: 1, ease: Power1.easeOut, delay: 1.5});
+	TweenMax.from($('#header p'), .5, {opacity: 0, ease: Power1.easeOut, delay: 1});
+	TweenMax.from($('#more'), .5, {opacity: 0, ease: Power1.easeOut, delay: 1.5});
 	
 	$('#more').click(function() {
 		TweenMax.to(window, 1.5, {scrollTo: '#education', ease: Power2.easeOut});
