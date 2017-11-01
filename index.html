@@ -373,7 +373,7 @@ $(window).on('load', function() {
 					.setTween(tween)
 					.addTo(controller);
 	var tween = TweenMax.from('.footer p', 1.5, {opacity: 0, 'margin-right': '10em', ease: Bounce.easeOut});
-	var scene = new ScrollMagic.Scene({triggerElement: '.footer p', triggerHook: .9})
+	var scene = new ScrollMagic.Scene({triggerElement: '.footer p', triggerHook: 1})
 					.setTween(tween)
 					.addTo(controller);
 
