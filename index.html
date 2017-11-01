@@ -11,6 +11,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.6/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.6/jquery.lazy.plugins.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.1/plugins/jquery.lazy.youtube.min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Crimson+Text" rel="stylesheet">
 </head>
@@ -29,9 +32,6 @@ h1, h2, h3, h4, h5, h6 {
 	letter-spacing: .15em;
 	text-transform: uppercase;
 	margin: 0;
-}
-a {
-	color: inherit;
 }
 a:hover, a:focus, a:target {
 	text-decoration: none;
@@ -60,11 +60,11 @@ a:hover, a:focus, a:target {
 }
 #header h1:after {
 	height: 2px;
-	width: 0;
 	background: white;
 	position: absolute;
 	content: '';
 	display: block;
+	width: 0;
 }
 #header p {
 	letter-spacing: .125em;
@@ -104,6 +104,16 @@ a:hover, a:focus, a:target {
 	padding: 4em 4em;
 	overflow: hidden;
 }
+.row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 4em 4em;
+	overflow: hidden;
+}
+.col-lg-5 {
+	text-align: center;
+}
 .spotlight .image {
 	width: 40%;
 	order: 1;
@@ -140,9 +150,31 @@ a:hover, a:focus, a:target {
 }
 .section-header h1 {
 	text-align: center;
-	background: white;
-	color: black;
 	padding: 1em 0;
+	line-height: 2em;
+}
+.section-header h1:after {
+	height: 2px;
+	width: 15em;
+	left: 50%;
+	margin-left: -7.5em;
+	background: black;
+	position: absolute;
+	content: '';
+	display: block;
+}
+.footer {
+	text-align: center;
+	background: black;
+	color: white;
+	padding: 10em 0;
+	margin-top: 5em;
+}
+.footer p {
+	font-size: 1.5em;
+}
+.footer p a {
+	color: white;
 }
 </style>
 <body>
@@ -190,6 +222,47 @@ a:hover, a:focus, a:target {
 			</div>
 		</div>
 	</section>
+	<section id="projects">
+		<div class="section-header">
+			<h1>Recent Projects</h1>
+		</div>
+		<div class="row" id="vizdom">
+			<div class="col-lg-5">
+				<video width="560" width="315" controls>
+					<source src="vizdom_v1.0.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div class="col-lg-7">
+				<p class="content-title text-muted">Vizdom: Interactice Analytics through Pen and Touch</p>
+				<p class="content-body">A project I have recently joined - an interface for machine learning and advanced statistics on large datasets, at interactive speeds, accessible by the novice user.</p>
+				<a href="http://cs.brown.edu/research/ptc/vizdom/vizdom.pdf" target="_blank">[paper]</a>
+			</div>
+		</div>
+		<div class="row" id="ogma">
+			<div class="col-lg-5">
+				<iframe data-loader="youtube" data-src="https://www.youtube.com/embed/L7jmqMlYO8o" width="560" height="315"></iframe>
+				<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/L7jmqMlYO8o" frameborder="0" allowfullscreen></iframe>-->
+			</div>
+			<div class="col-lg-7">
+				<p class="content-title text-muted">Ogma - A Virtual Reality Language Acquisition System</p>
+				<p class="content-body">One of my favorite projects - virtual reality language learning. I programmed the system and authored the paper.</p>
+				<a href="http://delivery.acm.org/10.1145/2920000/2910681/a66-Ebert.pdf?ip=128.148.231.11&id=2910681&acc=ACTIVE%20SERVICE&key=7777116298C9657D%2EDD490426617BA903%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=1000772772&CFTOKEN=67343223&__acm__=1509498964_751a2627442abf94818be59bcbf6488a" target="_blank">[paper]</a>
+			</div>
+		</div>
+		<div class="row" id="hskt">
+			<div class="col-lg-5">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/lkSk1pCzXHM" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div class="col-lg-7">
+				<p class="content-title text-muted">CogniLearn: A Deep Learning-based Interface for Cognitive Behavior Assessment</p>
+				<p class="content-body">Award-winning paper at IUI 2017 - combining interfaces, psychology and deep learning. I built the interface and co-authored the paper.</p>
+				<a href="http://delivery.acm.org/10.1145/3030000/3025213/p577-gattupalli.pdf?ip=128.148.231.11&id=3025213&acc=ACTIVE%20SERVICE&key=7777116298C9657D%2EDD490426617BA903%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=1000772772&CFTOKEN=67343223&__acm__=1509500407_386604a49da483a07c4a239e2fcdabe0" target="_blank">[paper]</a>
+			</div>
+		</div>
+	</section>
+	<div class="footer">
+		<p>Contact: <a href="mailto:dylan.ebert@gmail.com"><u>dylan.ebert@gmail.com</u></a></p>
+	</div>
 </div>
 </body>
 <script>
@@ -198,25 +271,41 @@ $(window).on('load', function() {
 	window.scrollTo(0, 1);
 
 	var controller = new ScrollMagic.Controller();
-	var educationTween = TweenMax.from('#education .section-header h1', 1, {'margin-left': '5em', opacity: 0, ease: Sine.easeOut});
+	var tween = TweenMax.from('#education .section-header', 1, {'margin-left': '5em', opacity: 0, ease: Sine.easeOut});
 	var scene = new ScrollMagic.Scene({triggerElement: '#education', triggerHook: .9})
-					.setTween(educationTween)
+					.setTween(tween)
 					.addTo(controller);
-	var brownTween = TweenMax.from('#brown', 1.5, {opacity: 0, ease: Sine.easeOut});
+	var tween = TweenMax.from('#brown', 1.5, {opacity: 0, ease: Sine.easeOut});
 	var scene = new ScrollMagic.Scene({triggerElement: '#brown', triggerHook: .9})
-					.setTween(brownTween)
+					.setTween(tween)
 					.addTo(controller);
-	var utaTween = TweenMax.from('#uta', 1.5, {opacity: 0, ease: Sine.easeOut});
+	var tween = TweenMax.from('#uta', 1.5, {opacity: 0, ease: Sine.easeOut});
 	var scene = new ScrollMagic.Scene({triggerElement: '#uta', triggerHook: .9})
-					.setTween(utaTween)
+					.setTween(tween)
 					.addTo(controller);
-	var workTween = TweenMax.from('#work .section-header h1', 1, {'margin-left': '5em', opacity: 0, ease: Sine.easeOut});
+	var tween = TweenMax.from('#work .section-header', 1, {'margin-left': '5em', opacity: 0, ease: Sine.easeOut});
 	var scene = new ScrollMagic.Scene({triggerElement: '#work', triggerHook: .9})
-					.setTween(workTween)
+					.setTween(tween)
 					.addTo(controller);
-	var heracleiaTween = TweenMax.from('#heracleia', 1.5, {opacity: 0, ease: Sine.easeOut});
+	var tween = TweenMax.from('#heracleia', 1.5, {opacity: 0, ease: Sine.easeOut});
 	var scene = new ScrollMagic.Scene({triggerElement: '#heracleia', triggerHook: .9})
-					.setTween(heracleiaTween)
+					.setTween(tween)
+					.addTo(controller);
+	var tween = TweenMax.from('#projects .section-header', 1, {'margin-left': '5em', opacity: 0, ease: Sine.easeOut});
+	var scene = new ScrollMagic.Scene({triggerElement: '#projects', triggerHook: .9})
+					.setTween(tween)
+					.addTo(controller);
+	var tween = TweenMax.from('#vizdom', 1.5, {opacity: 0, ease: Sine.easeOut});
+	var scene = new ScrollMagic.Scene({triggerElement: '#vizdom', triggerHook: .9})
+					.setTween(tween)
+					.addTo(controller);
+	var tween = TweenMax.from('#ogma', 1.5, {opacity: 0, ease: Sine.easeOut});
+	var scene = new ScrollMagic.Scene({triggerElement: '#ogma', triggerHook: .9})
+					.setTween(tween)
+					.addTo(controller);
+	var tween = TweenMax.from('#hskt', 1.5, {opacity: 0, ease: Sine.easeOut});
+	var scene = new ScrollMagic.Scene({triggerElement: '#hskt', triggerHook: .9})
+					.setTween(tween)
 					.addTo(controller);
 
 	TweenMax.from($('#header h1'), .5, {opacity: 0, scale: .95, ease: Power1.easeOut});
@@ -228,6 +317,8 @@ $(window).on('load', function() {
 	$('#more').click(function() {
 		TweenMax.to(window, 1.5, {scrollTo: '#education', ease: Power2.easeOut});
 	});
+	
+	$('iframe[data-src]').Lazy();
 });
 </script>
 </html>
