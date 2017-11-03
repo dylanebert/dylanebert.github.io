@@ -18,6 +18,7 @@
 html, body {
 	max-width: 100%;
 	overflow-x: hidden;
+	zoom: 100%;
 }
 body {
 	font-family: 'Open Sans', Helvetica, sans-serif;
@@ -332,9 +333,6 @@ a:hover, a:focus, a:target {
 </body>
 <script>
 $(window).on('load', function() {
-	//hide the address bar
-	window.scrollTo(0, 1);
-
 	var controller = new ScrollMagic.Controller();
 	var tween = TweenMax.from('#education .section-header', 1, {'margin-left': '5em', opacity: 0, ease: Sine.easeOut});
 	var scene = new ScrollMagic.Scene({triggerElement: '#education', triggerHook: .9})
