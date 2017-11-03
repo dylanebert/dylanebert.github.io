@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Dylan Ebert</title>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -31,7 +32,7 @@ div {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 800;
-	letter-spacing: .15em;
+	letter-spacing: .1em;
 	text-transform: uppercase;
 	margin: 0;
 }
@@ -53,7 +54,7 @@ a:hover, a:focus, a:target {
 	color: white;
 }
 #header img {
-	width: 20em;
+	width: 200px;
 	height: auto;
 	margin: 0 auto;
 	opacity: 0;
@@ -82,8 +83,8 @@ a:hover, a:focus, a:target {
 	color: white;
 	bottom: 0;
 	position: absolute;
-	height: 6em;
-	font-size: 1.5em;
+	height: 4em;
+	font-size: 1em;
 	letter-spacing: .125em;
 	left: 50%;
 	width: 16em;
@@ -102,44 +103,7 @@ a:hover, a:focus, a:target {
 	display: block;
 	content: '';
 	left: 50%;
-	bottom: 2em;
-}
-.spotlight {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 4em 4em;
-	overflow: hidden;
-}
-.row {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 4em 4em;
-	overflow: hidden;
-}
-.col-left {
-	text-align: center;
-}
-.col-right {
-	padding: 4em 2em;
-	max-width: 60%;
-}
-.spotlight .image {
-	width: 40%;
-	order: 1;
-	text-align: right;
-}
-.spotlight .image img {
-	margin-right: 2em;
-	width: 85%;
-	max-width: 400px;
-}
-.spotlight .content {
-	width: 60%;
-	order: 2;
-	text-align: left;
-	padding: 2em 2em;
+	bottom: 1em;
 }
 .content-title {
 	margin-bottom: 1em;
@@ -159,12 +123,15 @@ a:hover, a:focus, a:target {
 #brown h1 {
 	font-family: 'Crimson Text', serif;
 }
-.section-header h1 {
-	text-align: center;
-	padding: 1em 0;
-	line-height: 2em;
+.section-header {
+	padding: 0 5px;
 }
-.section-header h1:after {
+.section-header h2 {
+	text-align: center;
+	line-height: 2em;
+	padding: .5em 0;
+}
+.section-header h2:after {
 	height: 2px;
 	width: 15em;
 	left: 50%;
@@ -178,21 +145,21 @@ a:hover, a:focus, a:target {
 	text-align: center;
 	background: black;
 	color: white;
-	padding: 10em 0;
+	padding: 5em 0;
 	margin-top: 5em;
-}
-.footer p {
-	font-size: 1.5em;
 }
 .footer p a {
 	color: white;
+}
+video, .youtube {
+	max-width: 100%;
 }
 .youtube {
 	background-color: black;
 	overflow: hidden;
 	cursor: pointer;
 	width: 560px;
-	height: 315px;
+	height: auto;
 	padding-top: 56.25%;
 	position: relative;
 }
@@ -239,6 +206,64 @@ a:hover, a:focus, a:target {
     top: 0;
     left: 0;
 }
+.row {
+	padding: 1em 2em;
+}
+.col-md-6 {
+	padding: 1em 1em;
+}
+.logo {
+	max-width: 90%;
+}
+@media (min-width: 992px) {
+	.left {
+		text-align: right;
+	}
+	.right {
+		max-width: 40%;
+	}
+	.logo {
+		max-width: 50%;
+		margin-right: 1em;
+	}
+	#heracleia-logo {
+		margin-left: 20%;
+		margin-right: 1em;
+	}
+	.youtube-container {
+		min-height: 315px;
+	}
+	.youtube {
+		position: absolute;
+		right: 1em;
+		width: 560px;
+		padding-top: 315px;
+	}
+	h1 {
+		font-size: 5em;
+	}
+	#header img {
+		width: 300px;
+	}
+	#header h1 {
+		line-height: 2em;
+	}
+	#header p {
+		font-size: 2em;
+	}
+	#more {
+		font-size: 1.5em;
+	}
+	h2 {
+		font-size: 4em;
+	}
+	h3 {
+		font-size: 3em;
+	}
+	p {
+		font-size: 1.5em;
+	}
+}
 </style>
 <body>
 <div id="wrapper">
@@ -250,22 +275,22 @@ a:hover, a:focus, a:target {
 	</div>
 	<section id="education">
 		<div class="section-header">
-			<h1>Education</h1>
+			<h2>Education</h2>
 		</div>
-		<div class="spotlight" id="brown">
-			<div class="image">
-				<img src="brown.jpg">
+		<div class="row" id="brown">
+			<div class="col-md-6 left">
+				<img src="brown.jpg" class="logo">
 			</div>
-			<div class="content">
+			<div class="col-md-6 right">
 				<p class="content-title text-muted">PhD in Computer Science | 2017 - Present</p>
 				<p class="content-body">Pursuing research overlap between my HCI and design experience and state-of-the-art machine learning and data science.</p>
 			</div>
 		</div>
-		<div class="spotlight" id="uta">
-			<div class="image">
-				<img src="uta.gif">
+		<div class="row" id="uta">
+			<div class="col-md-6 left">
+				<img src="uta.gif" class="logo">
 			</div>
-			<div class="content">
+			<div class="col-md-6 right">
 				<p class="content-title text-muted">Bachelor of Science in Computer Science | 2013 - 2017</p>
 				<p class="content-body">Received strong background in computer science fundamentals. Focused in HCI and AI courses. </p>
 			</div>
@@ -273,13 +298,13 @@ a:hover, a:focus, a:target {
 	</section>
 	<section id="work">
 		<div class="section-header">
-			<h1>Work Experience</h1>
+			<h2>Work Experience</h2>
 		</div>
-		<div class="spotlight" id="heracleia">
-			<div class="image">
-				<h2>Heracleia Human-Centered Computing Lab</h2>
+		<div class="row" id="heracleia">
+			<div class="col-md-6 left">
+				<h3 id="heracleia-logo">Heracleia Human-Centered Computing Lab</h3>
 			</div>
-			<div class="content">
+			<div class="col-md-6 right">
 				<p class="content-title text-muted">Undergraduate Research Assistant | 2014 - 2017</p>
 				<p class="content-body">Worked on various HCI projects involving VR, mobile, rehabilitation, and robotics. Authored and published papers. Three-time PETRA conference presenter.</p>
 			</div>
@@ -287,39 +312,39 @@ a:hover, a:focus, a:target {
 	</section>
 	<section id="projects">
 		<div class="section-header">
-			<h1>Recent Projects</h1>
+			<h2>Recent Projects</h2>
 		</div>
 		<div class="row" id="vizdom">
-			<div class="col-left">
+			<div class="col-md-6 left">
 				<video width="560" width="315" controls="controls">
 					<source src="vizdom_v1.0.mp4" type="video/mp4">
 				</video>
 			</div>
-			<div class="col-right">
+			<div class="col-md-6 right">
 				<p class="content-title text-muted">Vizdom: Interactice Analytics through Pen and Touch</p>
 				<p class="content-body">A project I have recently joined - an interface for machine learning and advanced statistics on large datasets, at interactive speeds, accessible by the novice user.</p>
 				<a href="http://cs.brown.edu/research/ptc/vizdom/vizdom.pdf" target="_blank">[paper]</a>
 			</div>
 		</div>
 		<div class="row" id="ogma">
-			<div class="col-left"> 
+			<div class="col-md-6 left youtube-container"> 
 				<div class="youtube" data-embed="L7jmqMlYO8o">
 					<div class="play-button"></div>
 				</div>
 			</div>
-			<div class="col-right">
+			<div class="col-md-6 right">
 				<p class="content-title text-muted">Ogma - A Virtual Reality Language Acquisition System</p>
 				<p class="content-body">One of my favorite projects - virtual reality language learning. I programmed the system and authored the paper.</p>
 				<a href="http://delivery.acm.org/10.1145/2920000/2910681/a66-Ebert.pdf?ip=128.148.231.11&id=2910681&acc=ACTIVE%20SERVICE&key=7777116298C9657D%2EDD490426617BA903%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=1000772772&CFTOKEN=67343223&__acm__=1509498964_751a2627442abf94818be59bcbf6488a" target="_blank">[paper]</a>
 			</div>
 		</div>
 		<div class="row" id="hskt">
-			<div class="col-left">
+			<div class="col-md-6 left youtube-container">
 				<div class="youtube" data-embed="lkSk1pCzXHM">
 					<div class="play-button"></div>
 				</div>
 			</div>
-			<div class="col-right">
+			<div class="col-md-6 right">
 				<p class="content-title text-muted">CogniLearn: A Deep Learning-based Interface for Cognitive Behavior Assessment</p>
 				<p class="content-body">Award-winning paper at IUI 2017 - combining interfaces, psychology and deep learning. I built the interface and co-authored the paper.</p>
 				<a href="http://delivery.acm.org/10.1145/3030000/3025213/p577-gattupalli.pdf?ip=128.148.231.11&id=3025213&acc=ACTIVE%20SERVICE&key=7777116298C9657D%2EDD490426617BA903%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=1000772772&CFTOKEN=67343223&__acm__=1509500407_386604a49da483a07c4a239e2fcdabe0" target="_blank">[paper]</a>
@@ -334,43 +359,19 @@ a:hover, a:focus, a:target {
 <script>
 $(window).on('load', function() {
 	var controller = new ScrollMagic.Controller();
-	var tween = TweenMax.from('#education .section-header', 1, {'margin-left': '5em', opacity: 0, ease: Sine.easeOut});
+	var tween = TweenMax.from('#education .section-header', 1, {opacity: 0, ease: Sine.easeOut});
 	var scene = new ScrollMagic.Scene({triggerElement: '#education', triggerHook: .9})
 					.setTween(tween)
 					.addTo(controller);
-	var tween = TweenMax.from('#brown', 1.5, {opacity: 0, ease: Sine.easeOut});
-	var scene = new ScrollMagic.Scene({triggerElement: '#brown', triggerHook: .9})
-					.setTween(tween)
-					.addTo(controller);
-	var tween = TweenMax.from('#uta', 1.5, {opacity: 0, ease: Sine.easeOut});
-	var scene = new ScrollMagic.Scene({triggerElement: '#uta', triggerHook: .9})
-					.setTween(tween)
-					.addTo(controller);
-	var tween = TweenMax.from('#work .section-header', 1, {'margin-left': '5em', opacity: 0, ease: Sine.easeOut});
+	var tween = TweenMax.from('#work .section-header', 1, {opacity: 0, ease: Sine.easeOut});
 	var scene = new ScrollMagic.Scene({triggerElement: '#work', triggerHook: .9})
 					.setTween(tween)
 					.addTo(controller);
-	var tween = TweenMax.from('#heracleia', 1.5, {opacity: 0, ease: Sine.easeOut});
-	var scene = new ScrollMagic.Scene({triggerElement: '#heracleia', triggerHook: .9})
-					.setTween(tween)
-					.addTo(controller);
-	var tween = TweenMax.from('#projects .section-header', 1, {'margin-left': '5em', opacity: 0, ease: Sine.easeOut});
+	var tween = TweenMax.from('#projects .section-header', 1, {opacity: 0, ease: Sine.easeOut});
 	var scene = new ScrollMagic.Scene({triggerElement: '#projects', triggerHook: .9})
 					.setTween(tween)
 					.addTo(controller);
-	var tween = TweenMax.from('#vizdom', 1.5, {opacity: 0, ease: Sine.easeOut});
-	var scene = new ScrollMagic.Scene({triggerElement: '#vizdom', triggerHook: .9})
-					.setTween(tween)
-					.addTo(controller);
-	var tween = TweenMax.from('#ogma', 1.5, {opacity: 0, ease: Sine.easeOut});
-	var scene = new ScrollMagic.Scene({triggerElement: '#ogma', triggerHook: .9})
-					.setTween(tween)
-					.addTo(controller);
-	var tween = TweenMax.from('#hskt', 1.5, {opacity: 0, ease: Sine.easeOut});
-	var scene = new ScrollMagic.Scene({triggerElement: '#hskt', triggerHook: .9})
-					.setTween(tween)
-					.addTo(controller);
-	var tween = TweenMax.from('.footer p', 1.5, {opacity: 0, 'margin-right': '10em', ease: Bounce.easeOut});
+	var tween = TweenMax.from('.footer p', 1.5, {opacity: 0, ease: Sine.easeOut});
 	var scene = new ScrollMagic.Scene({triggerElement: '.footer p', triggerHook: 1})
 					.setTween(tween)
 					.addTo(controller);
