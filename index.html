@@ -54,13 +54,13 @@ a:hover, a:focus, a:target {
 	color: white;
 }
 #header img {
-	width: 200px;
+	width: 150px;
 	height: auto;
 	margin: 0 auto;
 	opacity: 0;
 }
 #header h1 {
-	line-height: 2.5em;
+	line-height: 2em;
 	opacity: 0;
 	transform: scale(.95);
 }
@@ -106,7 +106,7 @@ a:hover, a:focus, a:target {
 	bottom: 1em;
 }
 .content-title {
-	margin-bottom: 1em;
+	padding: 1em 0;
 	font-size: 1.5em;
 }
 .content-body {
@@ -123,19 +123,16 @@ a:hover, a:focus, a:target {
 #brown h1 {
 	font-family: 'Crimson Text', serif;
 }
-.section-header {
-	padding: 0 5px;
-}
 .section-header h2 {
 	text-align: center;
 	line-height: 2em;
-	padding: .5em 0;
+	padding: 1em 0;
 }
 .section-header h2:after {
 	height: 2px;
-	width: 15em;
+	width: 50%;
 	left: 50%;
-	margin-left: -7.5em;
+	margin-left: -25%;
 	background: black;
 	position: absolute;
 	content: '';
@@ -153,6 +150,9 @@ a:hover, a:focus, a:target {
 }
 video, .youtube {
 	max-width: 100%;
+}
+.youtube-container {
+	margin: 1em 0;
 }
 .youtube {
 	background-color: black;
@@ -206,16 +206,10 @@ video, .youtube {
     top: 0;
     left: 0;
 }
-.row {
-	padding: 1em 2em;
-}
-.col-md-6 {
-	padding: 1em 1em;
-}
 .logo {
 	max-width: 90%;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
 	.left {
 		text-align: right;
 	}
