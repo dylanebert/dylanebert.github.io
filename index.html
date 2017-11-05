@@ -16,11 +16,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Crimson+Text" rel="stylesheet">
 </head>
 <style>
-html, body {
-	max-width: 100%;
-	overflow-x: hidden;
-	zoom: 100%;
-}
 body {
 	font-family: 'Open Sans', Helvetica, sans-serif;
 	font-weight: 400;
@@ -60,7 +55,7 @@ a:hover, a:focus, a:target {
 	opacity: 0;
 }
 #header h1 {
-	line-height: 2em;
+	line-height: 1.5em;
 	opacity: 0;
 	transform: scale(.95);
 }
@@ -75,7 +70,7 @@ a:hover, a:focus, a:target {
 #header p {
 	letter-spacing: .125em;
 	font-size: 1.25em;
-	padding-top: 1.5em;
+	padding: 1em 0;
 	opacity: 0;
 }
 #more {
@@ -106,11 +101,12 @@ a:hover, a:focus, a:target {
 	bottom: 1em;
 }
 .content-title {
-	padding: 1em 0;
+	padding: 1em 1em;
 	font-size: 1.5em;
 }
 .content-body {
 	font-size: 1.25em;
+	padding: 0 1em;
 }
 #brown {
 	background: white;
@@ -126,7 +122,7 @@ a:hover, a:focus, a:target {
 .section-header h2 {
 	text-align: center;
 	line-height: 2em;
-	padding: 1em 0;
+	padding: 1em 1em;
 }
 .section-header h2:after {
 	height: 2px;
@@ -148,18 +144,17 @@ a:hover, a:focus, a:target {
 .footer p a {
 	color: white;
 }
-video, .youtube {
-	max-width: 100%;
+.video-container {
+	max-width: 560px;
+	padding: 1em 1em;
 }
-.youtube-container {
-	margin: 1em 0;
+video {
+	max-width: 100%;
 }
 .youtube {
 	background-color: black;
 	overflow: hidden;
 	cursor: pointer;
-	width: 560px;
-	height: auto;
 	padding-top: 56.25%;
 	position: relative;
 }
@@ -207,40 +202,44 @@ video, .youtube {
     left: 0;
 }
 .logo {
-	max-width: 90%;
+	width: 85%;
+	max-width: 300px;
+	margin-left: 1em;
 }
-@media (min-width: 768px) {
+#heracleia-logo {
+	width: 85%;
+	max-width: 500px;
+	margin-left: 1em;
+}
+@media (min-width: 1200px) {
 	.left {
 		text-align: right;
 	}
 	.right {
-		max-width: 40%;
-	}
-	.logo {
 		max-width: 50%;
-		margin-right: 1em;
 	}
-	#heracleia-logo {
-		margin-left: 20%;
-		margin-right: 1em;
+	.logo, #heracleia-logo {
+		width: 80%;
 	}
-	.youtube-container {
-		min-height: 315px;
-	}
-	.youtube {
+	.video-container {
 		position: absolute;
 		right: 1em;
-		width: 560px;
-		padding-top: 315px;
+		width: 80%;
+		max-width: 560px;
+		max-height: 315px;
 	}
-	h1 {
-		font-size: 5em;
+	#vizdom, #ogma, #hskt {
+		min-height: 350px;
+	}
+	#heracleia-logo {
+		position: absolute;
+		right: 1em;
 	}
 	#header img {
-		width: 300px;
+		width: 250px;
 	}
 	#header h1 {
-		line-height: 2em;
+		line-height: 1.5em;
 	}
 	#header p {
 		font-size: 2em;
@@ -248,11 +247,14 @@ video, .youtube {
 	#more {
 		font-size: 1.5em;
 	}
-	h2 {
+	h1 {
 		font-size: 4em;
 	}
-	h3 {
+	h2 {
 		font-size: 3em;
+	}
+	h3 {
+		font-size: 2em;
 	}
 	p {
 		font-size: 1.5em;
@@ -271,20 +273,20 @@ video, .youtube {
 		<div class="section-header">
 			<h2>Education</h2>
 		</div>
-		<div class="row" id="brown">
-			<div class="col-md-6 left">
+		<div class="row no-gutters" id="brown">
+			<div class="col-lg-5 left">
 				<img src="brown.jpg" class="logo">
 			</div>
-			<div class="col-md-6 right">
+			<div class="col-lg-7 right">
 				<p class="content-title text-muted">PhD in Computer Science | 2017 - Present</p>
 				<p class="content-body">Pursuing research overlap between my HCI and design experience and state-of-the-art machine learning and data science.</p>
 			</div>
 		</div>
-		<div class="row" id="uta">
-			<div class="col-md-6 left">
+		<div class="row no-gutters" id="uta">
+			<div class="col-lg-5 left">
 				<img src="uta.gif" class="logo">
 			</div>
-			<div class="col-md-6 right">
+			<div class="col-lg-7 right">
 				<p class="content-title text-muted">Bachelor of Science in Computer Science | 2013 - 2017</p>
 				<p class="content-body">Received strong background in computer science fundamentals. Focused in HCI and AI courses. </p>
 			</div>
@@ -294,11 +296,11 @@ video, .youtube {
 		<div class="section-header">
 			<h2>Work Experience</h2>
 		</div>
-		<div class="row" id="heracleia">
-			<div class="col-md-6 left">
+		<div class="row no-gutters" id="heracleia">
+			<div class="col-lg-5 left">
 				<h3 id="heracleia-logo">Heracleia Human-Centered Computing Lab</h3>
 			</div>
-			<div class="col-md-6 right">
+			<div class="col-lg-7 right">
 				<p class="content-title text-muted">Undergraduate Research Assistant | 2014 - 2017</p>
 				<p class="content-body">Worked on various HCI projects involving VR, mobile, rehabilitation, and robotics. Authored and published papers. Three-time PETRA conference presenter.</p>
 			</div>
@@ -308,40 +310,46 @@ video, .youtube {
 		<div class="section-header">
 			<h2>Recent Projects</h2>
 		</div>
-		<div class="row" id="vizdom">
-			<div class="col-md-6 left">
-				<video width="560" width="315" controls="controls">
-					<source src="vizdom_v1.0.mp4" type="video/mp4">
-				</video>
+		<div class="row no-gutters" id="vizdom">
+			<div class="col-lg-5 left">
+				<div class="video-container">
+					<video width="560" width="315" controls="controls">
+						<source src="vizdom_v1.0.mp4" type="video/mp4">
+					</video>
+				</div>
 			</div>
-			<div class="col-md-6 right">
+			<div class="col-lg-7 right">
 				<p class="content-title text-muted">Vizdom: Interactice Analytics through Pen and Touch</p>
 				<p class="content-body">A project I have recently joined - an interface for machine learning and advanced statistics on large datasets, at interactive speeds, accessible by the novice user.</p>
-				<a href="http://cs.brown.edu/research/ptc/vizdom/vizdom.pdf" target="_blank">[paper]</a>
+				<a class="content-body" href="http://cs.brown.edu/research/ptc/vizdom/vizdom.pdf" target="_blank">[paper]</a>
 			</div>
 		</div>
-		<div class="row" id="ogma">
-			<div class="col-md-6 left youtube-container"> 
-				<div class="youtube" data-embed="L7jmqMlYO8o">
-					<div class="play-button"></div>
+		<div class="row no-gutters" id="ogma">
+			<div class="col-lg-5 left"> 
+				<div class="video-container">
+					<div class="youtube" data-embed="L7jmqMlYO8o">
+						<div class="play-button"></div>
+					</div>
 				</div>
 			</div>
-			<div class="col-md-6 right">
+			<div class="col-lg-7 right">
 				<p class="content-title text-muted">Ogma - A Virtual Reality Language Acquisition System</p>
 				<p class="content-body">One of my favorite projects - virtual reality language learning. I programmed the system and authored the paper.</p>
-				<a href="http://delivery.acm.org/10.1145/2920000/2910681/a66-Ebert.pdf?ip=128.148.231.11&id=2910681&acc=ACTIVE%20SERVICE&key=7777116298C9657D%2EDD490426617BA903%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=1000772772&CFTOKEN=67343223&__acm__=1509498964_751a2627442abf94818be59bcbf6488a" target="_blank">[paper]</a>
+				<a class="content-body" href="http://delivery.acm.org/10.1145/2920000/2910681/a66-Ebert.pdf?ip=128.148.231.11&id=2910681&acc=ACTIVE%20SERVICE&key=7777116298C9657D%2EDD490426617BA903%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=1000772772&CFTOKEN=67343223&__acm__=1509498964_751a2627442abf94818be59bcbf6488a" target="_blank">[paper]</a>
 			</div>
 		</div>
-		<div class="row" id="hskt">
-			<div class="col-md-6 left youtube-container">
-				<div class="youtube" data-embed="lkSk1pCzXHM">
-					<div class="play-button"></div>
+		<div class="row no-gutters" id="hskt">
+			<div class="col-lg-5 left">
+				<div class="video-container">
+					<div class="youtube" data-embed="lkSk1pCzXHM">
+						<div class="play-button"></div>
+					</div>
 				</div>
 			</div>
-			<div class="col-md-6 right">
+			<div class="col-lg-7 right">
 				<p class="content-title text-muted">CogniLearn: A Deep Learning-based Interface for Cognitive Behavior Assessment</p>
 				<p class="content-body">Award-winning paper at IUI 2017 - combining interfaces, psychology and deep learning. I built the interface and co-authored the paper.</p>
-				<a href="http://delivery.acm.org/10.1145/3030000/3025213/p577-gattupalli.pdf?ip=128.148.231.11&id=3025213&acc=ACTIVE%20SERVICE&key=7777116298C9657D%2EDD490426617BA903%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=1000772772&CFTOKEN=67343223&__acm__=1509500407_386604a49da483a07c4a239e2fcdabe0" target="_blank">[paper]</a>
+				<a class="content-body" href="http://delivery.acm.org/10.1145/3030000/3025213/p577-gattupalli.pdf?ip=128.148.231.11&id=3025213&acc=ACTIVE%20SERVICE&key=7777116298C9657D%2EDD490426617BA903%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=1000772772&CFTOKEN=67343223&__acm__=1509500407_386604a49da483a07c4a239e2fcdabe0" target="_blank">[paper]</a>
 			</div>
 		</div>
 	</section>
