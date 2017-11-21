@@ -166,6 +166,25 @@ img, video {
 #heracleia-logo {
 	margin: 0;
 }
+#rct {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 2em auto;
+	height: 192px;
+	background-image: url('rct_banner.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+#rct h1 {
+	text-transform: uppercase;
+	letter-spacing: .125em;
+	font-weight: bold;
+}
 #footer {
 	padding: 3em;
 	margin-top: 1em;
@@ -291,19 +310,9 @@ img, video {
 			<p><a href="http://cs.brown.edu/research/ptc/vizdom/vizdom.pdf" target="_blank">[paper]</a></p>
 		</div>
 	</div>
-	<div class="row separate row-vid" id="ogma">
-		<div class="vid-wrapper">
-			<div class="col-md-5 padded"> 
-				<div class="youtube" data-embed="L7jmqMlYO8o">
-					<div class="play-button"></div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-7 padded">
-			<p class="text-muted">Ogma - A Virtual Reality Language Acquisition System</p>
-			<p>One of my favorite projects - virtual reality language learning. I programmed the system and authored the paper.</p>
-			<p><a href="http://delivery.acm.org/10.1145/2920000/2910681/a66-Ebert.pdf?ip=128.148.231.11&id=2910681&acc=ACTIVE%20SERVICE&key=7777116298C9657D%2EDD490426617BA903%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=1000772772&CFTOKEN=67343223&__acm__=1509498964_751a2627442abf94818be59bcbf6488a" target="_blank">[paper]</a></p>
-		</div>
+	<div class="row" id="rct">
+		<h1>Neural RCT</h1>
+		<p>Using neural networks to generate RCT2 tracks</p>
 	</div>
 	<div class="row row-vid" id="hskt">
 		<div class="col-md-5 padded">
@@ -319,6 +328,20 @@ img, video {
 			<p><a href="http://delivery.acm.org/10.1145/3030000/3025213/p577-gattupalli.pdf?ip=128.148.231.11&id=3025213&acc=ACTIVE%20SERVICE&key=7777116298C9657D%2EDD490426617BA903%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=1000772772&CFTOKEN=67343223&__acm__=1509500407_386604a49da483a07c4a239e2fcdabe0" target="_blank">[paper]</a></p>
 		</div>
 	</div>
+	<div class="row separate row-vid" id="ogma">
+		<div class="vid-wrapper">
+			<div class="col-md-5 padded"> 
+				<div class="youtube" data-embed="L7jmqMlYO8o">
+					<div class="play-button"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-7 padded">
+			<p class="text-muted">Ogma - A Virtual Reality Language Acquisition System</p>
+			<p>One of my favorite projects - virtual reality language learning. I programmed the system and authored the paper.</p>
+			<p><a href="http://delivery.acm.org/10.1145/2920000/2910681/a66-Ebert.pdf?ip=128.148.231.11&id=2910681&acc=ACTIVE%20SERVICE&key=7777116298C9657D%2EDD490426617BA903%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=1000772772&CFTOKEN=67343223&__acm__=1509498964_751a2627442abf94818be59bcbf6488a" target="_blank">[paper]</a></p>
+		</div>
+	</div>	
 </div>
 <div class="container-fluid" id="footer">
 	<p>Contact: <a href="mailto:dylan.ebert@gmail.com">dylan.ebert@gmail.com</a></p>
@@ -334,6 +357,10 @@ $(window).on('load', function() {
 	
 	$('#more').click(function() {
 		TweenMax.to(window, 1.5, {scrollTo: '#education', ease: Power2.easeOut});
+	});
+	
+	$('#rct').click(function() {
+		window.location.pathname = '/neural_rct';
 	});
 	
 	var $vids = $('.youtube');
