@@ -118,21 +118,23 @@ img, video {
 #profile {
 	width: 150px;
 	margin: 0 auto;
+	opacity: 0;
 }
 #name {
 	line-height: 1.5em;
+	opacity: 0;
 }
 #name:after {
 	background: white;
 	position: absolute;
-	width: 80%;
+	width: 0;
 	left: 10%;
 	height: 2px;
 	content: '';
 	display: block;
 }
 #description {
-	
+	opacity: 0;
 }
 #more {
 	position: absolute;
@@ -141,6 +143,7 @@ img, video {
 	left: 35%;
 	color: white;
 	font-size: 1em;
+	opacity: 0;
 }
 #more:hover {
 	text-decoration: inherit;
@@ -323,11 +326,11 @@ img, video {
 </body>
 <script>
 $(window).on('load', function() {
-	TweenMax.from($('#name'), .5, {opacity: 0, scale: .95, ease: Power1.easeOut});
-	TweenMax.from(CSSRulePlugin.getRule('#name:after'), .5, {cssRule:{width: 0}, delay: .5});
-	TweenMax.from($('#profile'), .5, {opacity: 0, ease: Power1.easeOut, delay: .5});
-	TweenMax.from($('#description'), .5, {opacity: 0, ease: Power1.easeOut, delay: 1});
-	TweenMax.from($('#more'), .5, {opacity: 0, ease: Power1.easeOut, delay: 1.5});
+	TweenMax.to($('#name'), .5, {opacity: 1, scale: .95, ease: Power1.easeOut});
+	TweenMax.to(CSSRulePlugin.getRule('#name:after'), .5, {cssRule:{width: '80%'}, delay: .5});
+	TweenMax.to($('#profile'), .5, {opacity: 1, ease: Power1.easeOut, delay: .5});
+	TweenMax.to($('#description'), .5, {opacity: 1, ease: Power1.easeOut, delay: 1});
+	TweenMax.to($('#more'), .5, {opacity: 1, ease: Power1.easeOut, delay: 1.5});
 	
 	$('#more').click(function() {
 		TweenMax.to(window, 1.5, {scrollTo: '#education', ease: Power2.easeOut});
