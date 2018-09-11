@@ -13,7 +13,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="icon" href="favicon.ico">
 </head>
 <style>
@@ -21,396 +22,212 @@ html, body {
 	font-family: 'Open Sans', sans-serif;
 	width: 100%;
 	height: 100%;
-}
-img, video {
-	max-width: 100%;
-}
-.title {
-	text-transform: uppercase;
-	letter-spacing: .125em;
-	text-align: center;
-	font-weight: bold;
-}
-.col-img {
-	width: 200px;
-}
-.padded {
-	padding-top: 1em;
-}
-.separate {
-	padding: 1em 0;
-}
-.row {
-	padding: 1em 0;
-}
-.separate:after {
-	background: gray;
-	position: absolute;
-	display: block;
-	width: 100%;
-	left: 0;
-	height: 1px;
-	content: '';
-}
-.youtube {
-	background-color: black;
-	overflow: hidden;
-	cursor: pointer;
-	padding-top: 56.25%;
-	position: relative;
-}
-.youtube img {
-	width: 100%;
-	top: -17%;
-	opacity: 0.7;
-	left: 0;
-}
-.youtube .play-button {
-	width: 90px;
-	height: 60px;
-	background-color: #333;
-	box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
-	z-index: 1;
-	opacity: .8;
-	border-radius: 6px;
-}
-.youtube .play-button:before {
-    content: "";
-    border-style: solid;
-    border-width: 15px 0 15px 26.0px;
-    border-color: transparent transparent transparent #fff;
-}
-.youtube img,
-.youtube .play-button {
-    cursor: pointer;
-}
-.youtube img,
-.youtube iframe,
-.youtube .play-button,
-.youtube .play-button:before {
-    position: absolute;
-}
-.youtube .play-button,
-.youtube .play-button:before {
-    top: 50%;
-    left: 50%;
-    transform: translate3d( -50%, -50%, 0 );
-}
-.youtube iframe {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-.vid-wrapper {
-	width: 400px;
-	max-width: 100%;
+	color: white;
 }
 #header {
-	display: flex;
-	flex-direction: column;
 	height: 100%;
-	color: white;
-	background: black;
-	text-align: center;
-	justify-content: center;
-	padding-bottom: 10%;
+	position: relative;
 }
-#profile {
-	width: 150px;
-	margin: 0 auto;
-	opacity: 0;
-}
-#name {
-	line-height: 1.5em;
-	opacity: 0;
-}
-#name:after {
-	background: white;
-	position: absolute;
-	width: 0;
-	left: 10%;
-	height: 2px;
-	content: '';
-	display: block;
-}
-#description {
-	opacity: 0;
-}
-#more {
-	position: absolute;
-	bottom: 3em;
-	width: 30%;
-	left: 35%;
-	color: white;
-	font-size: 1em;
-	opacity: 0;
-}
-#more:hover {
-	text-decoration: inherit;
-	cursor: pointer;
-}
-#more:after {
-	background-image: url('arrow.svg');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 1em;
-	width: 1em;
-	margin-left: -.5em;
-	display: block;
-	content: '';
+#me {
+	width: 200px;
+	height: auto;
 	position: absolute;
 	left: 50%;
-	bottom: -1.5em;
+	top: 50%;
+	margin-left: -100px;
+	margin-top: -150px;
+	border: 10px solid #dfccf1;
 }
-#heracleia-logo {
-	margin: 0;
-}
-#rct {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin: 2em auto;
-	height: 192px;
-	background-image: url('rct_banner.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	color: white;
+#name-wrapper {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 0;
+	margin-top: 50px;
 	text-align: center;
-	cursor: pointer;
-}
-#rct h1 {
+	opacity: .8;
 	text-transform: uppercase;
-	letter-spacing: .125em;
-	font-weight: bold;
+	letter-spacing: 2px;
+}
+.fa {
+	padding: 20px;
+	font-size: 30px;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+}
+.fa:hover, .fa:active, .fa:focus {
+	color: #dfccf1;
+	text-decoration: none;
+}
+.box {
+	border: 3px solid white;
+	padding: 15px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	position: relative;
+}
+.box p {
+	opacity: .8;
+}
+#about, #heracleia {
+	border-color: #9ab7d3;
+}
+#brown, #rct {
+	border-color: #dfccf1;
+}
+#uta {
+	border-color: #bdd0c4;
+}
+#brown a, #uta a, #heracleia a, #rct a {
+	opacity: .8;
+	color: white;
+	font-size: 22px;
+}
+#brown a, #uta a {
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 #footer {
-	padding: 3em;
-	margin-top: 1em;
-	background: black;
-	color: white;
+	width: 100%;
+	padding: 70px 0;
 	text-align: center;
+	opacity: .7;
 }
-#footer p a {
-	text-decoration: underline;
+#footer a {
 	color: white;
-	cursor: pointer;
 }
-
-@media (min-width: 992px) {
-	#profile {
-		width: 250px;
-	}
-	#header {
-		padding: 0;
-	}
-	.title {
-		margin-top: 1.5em;
-	}
-	#footer {
-		padding: 5em 0;
-		margin-top: 5em;
-	}
-	.row {
-		padding: 2em 0;
-	}
-	.col-md-5 {
-		text-align: right;
-	}
-	.separate:after {
-		display: none;
-	}
-	.row-vid {
-		height: 320px;
-	}
-	#heracleia-logo {
-		position: absolute;
-		display: block;
-		right: 1em;
-	}
-	h1 {
-		font-size: 4em;
-	}
-	h2 {
-		font-size: 3em;
-	}
-	p {
-		font-size: 1.5em;
-	}
-	.col-img {
-		width: 300px;
-	}
-	#more {
-		font-size: 1.5em;
-	}
-	.vid-wrapper {
-		width: auto;
-	}
+#particles-js {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-color: #212121;
+	background-image: url('');
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
 }
 </style>
 <body>
-<div id="header">
-	<img class="img-circle" src="me.jpeg" id="profile">
-	<h1 class="title" id="name">Dylan Ebert</h1>
-	<p id="description">PhD Student | Brown University</p>
-	<a class="title" id="more">Resume</a>
-</div>
-<div class="container" id="education">
-	<h2 class="title"><u>Education</u></h2>
-	<div class="row" id="brown">
-		<div class="col-md-5 padded">
-			<img src="brown.jpg" class="col-img">
-		</div>
-		<div class="col-md-7 padded">
-			<p class="text-muted">PhD in Computer Science | 2017 - Present</p>
-			<p>Pursuing research in natural language processing and machine learning, from an HCI background.</p>
-		</div>
-	</div>
-	<div class="row" id="uta">
-		<div class="col-md-5 padded">
-			<img src="uta.gif" class="col-img">
-		</div>
-		<div class="col-md-7 padded">
-			<p class="text-muted">Bachelor of Science in Computer Science | 2013 - 2017</p>
-			<p>Received strong background in computer science fundamentals. Focused in HCI and AI courses. </p>
-		</div>
+<div class="container" id="header">
+	<img src="me.jpg" id="me" class="img-circle">
+	<div id="name-wrapper">
+		<h1 id="name">Dylan &nbsp;Ebert</h1>
+		<a href="https://www.facebook.com/dylanebert" class="fa fa-facebook" target="_blank"></a>
+		<a href="https://github.com/dylanebert" class="fa fa-github" target="_blank"></a>
+		<a href="https://www.linkedin.com/in/dylan-ebert-600313107/" class="fa fa-linkedin" target="_blank"></a>
 	</div>
 </div>
-<div class="container" id="work">
-	<h2 class="title"><u>Work Experience</u></h2>
-	<div class="row" id="heracleia">
-		<div class="col-md-5 padded">
-			<h3 id="heracleia-logo" class="col-img">Heracleia Human-Centered Computing Lab</h3>
+<div class="container">
+	<div id="about" class="row box">
+		<p>I'm a computer science / natural language processing PhD student at Brown University. Working on using deep learning for visual language grounding. I like UI/UX, animation,
+			graphics, and all that visual interactive stuff more than the average AI researcher.</p>
+	</div>
+	<div class="row" id="education">
+		<div class="col-md-6 box" id="brown">
+			<a href="https://www.brown.edu" target="_blank">Brown University</a>
+			<p>PhD in Computer Science | 2017 - present</p>
 		</div>
-		<div class="col-md-7 padded">
-			<p class="text-muted">Undergraduate Research Assistant | 2014 - 2017</p>
-			<p>Worked on various HCI projects involving VR, mobile, rehabilitation, and robotics. Authored and published papers. Three-time PETRA conference presenter.</p>
+		<div class="col-md-6 box" id="uta">
+			<a href="https://www.uta.edu" target="_blank">University of Texas at Arlington</a>
+			<p>Bachelor of Science in Computer Science | 2013 - 2017</p>
 		</div>
 	</div>
-</div>
-<div class="container" id="projects">
-	<h2 class="title"><u>Recent Projects</u></h2>
-	<div class="row" id="rct">
-		<h1>Neural RCT</h1>
-		<p>Using neural networks to generate RCT2 tracks</p>
-	</div>
-	<div class="row row-vid" id="hskt">
-		<div class="col-md-5 padded">
-			<div class="vid-wrapper">
-				<div class="youtube" data-embed="lkSk1pCzXHM">
-					<div class="play-button"></div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-7 padded">
-			<p class="text-muted">CogniLearn: A Deep Learning-based Interface for Cognitive Behavior Assessment</p>
-			<p>Award-winning paper at IUI 2017 - combining interfaces, psychology and deep learning. I built the interface and co-authored the paper.</p>
-			<p><a href="https://dl.acm.org/citation.cfm?id=3025213" target="_blank">[paper]</a></p>
-		</div>
-	</div>
-	<div class="row separate row-vid" id="ogma">
-		<div class="vid-wrapper">
-			<div class="col-md-5 padded"> 
-				<div class="youtube" data-embed="L7jmqMlYO8o">
-					<div class="play-button"></div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-7 padded">
-			<p class="text-muted">Ogma - A Virtual Reality Language Acquisition System</p>
-			<p>One of my favorite projects - virtual reality language learning. I programmed the system and authored the paper.</p>
-			<p><a href="https://dl.acm.org/citation.cfm?id=2910681" target="_blank">[paper]</a></p>
-		</div>
-	</div>	
-</div>
-<!--<div class="container" id="publications">
-	<h2 class="title">Publications</h2>
 	<div class="row">
-		<div class="panel-group" id="accordion">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-							Publication 1
-						</a>
-					</h3>
-				</div>
-				<div id="collapse1" class="panel-collapse collapse in">
-					<div class="panel-body">
-						Publication information
-					</div>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-							Publication 2
-						</a>
-					</h3>
-				</div>
-				<div id="collapse2" class="panel-collapse collapse">
-					<div class="panel-body">
-						Publication information
-					</div>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-							Publication 3
-						</a>
-					</h3>
-				</div>
-				<div id="collapse3" class="panel-collapse collapse">
-					<div class="panel-body">
-						Publication information
-					</div>
-				</div>
-			</div>
+		<div class="col-md-6 box" id="heracleia">
+			<a href="http://heracleia.uta.edu" target="_blank">Heracleia Human-Centered Computing Lab</a>
+			<p>Undergraduate Researcher in Human-Computer Interaction | 2014 - 2017</p>
+		</div>
+		<div class="col-md-6 box" id="rct">
+			<a href="http://dylanebert.com/neural_rct">Neural_RCT</a>
+			<p>Using neural networks to generate roller coaster tycoon tracks</p>
 		</div>
 	</div>
-</div>-->
-<div class="container-fluid" id="footer">
-	<p>Contact: <a href="mailto:dylan.ebert@gmail.com">dylan.ebert@gmail.com</a></p>
 </div>
+<div class="container" id="footer">
+	<a href="mailto:dylan.ebert@gmail.com">dylan.ebert@gmail.com</a>
+</div>
+<div id="particles-js"></div>
 </body>
+<script src="particles.min.js"></script>
 <script>
-$(window).on('load', function() {
-	TweenMax.to($('#name'), .5, {opacity: 1, scale: .95, ease: Power1.easeOut});
-	TweenMax.to(CSSRulePlugin.getRule('#name:after'), .5, {cssRule:{width: '80%'}, delay: .5});
-	TweenMax.to($('#profile'), .5, {opacity: 1, ease: Power1.easeOut, delay: .5});
-	TweenMax.to($('#description'), .5, {opacity: 1, ease: Power1.easeOut, delay: 1});
-	TweenMax.to($('#more'), .5, {opacity: 1, ease: Power1.easeOut, delay: 1.5});
-	
-	$('#more').click(function() {
-		TweenMax.to(window, 1.5, {scrollTo: '#education', ease: Power2.easeOut});
-	});
-	
-	$('#rct').click(function() {
-		window.location.pathname = '/neural_rct';
-	});
-	
-	var $vids = $('.youtube');
-	for(var i = 0; i < $vids.length; i++) {
-		var source = 'https://img.youtube.com/vi/' + $vids[i].dataset.embed + '/sddefault.jpg';
-		var img = new Image();
-		img.src = source;
-		img.addEventListener('load', function() {
-			$vids[i].appendChild(img);
-		}(i));
-		$vids[i].addEventListener('click', function() {
-			var iframe = document.createElement('iframe');
-			iframe.setAttribute( "frameborder", "0" );
-            iframe.setAttribute( "allowfullscreen", "" );
-            iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
-			this.innerHTML = '';
-			this.appendChild(iframe);
-		});
-	}
+$(document).ready(function() {
+
 });
+
+particlesJS('particles-js', {
+	"particles": {
+		"number": {
+			"value": 50,
+			"density": {
+				"enable": true,
+				"value_area": 800
+			}
+		},
+		"color": {
+			"value": "random"
+		},
+		"shape": {
+			"type": "circle",
+			"stroke": {
+				"width": 0,
+				"color": "#000000"
+			},
+			"polygon": {
+				"nb_sides": 5
+			},
+			"image": {
+				"src": "img/github.svg",
+				"width": 100,
+				"height": 100
+			}
+		},
+		"opacity": {
+			"value": 0.5,
+			"random": false,
+			"anim": {
+				"enable": false,
+				"speed": 1,
+				"opacity_min": 0.1,
+				"sync": false
+			}
+		},
+		"size": {
+			"value": 8,
+			"random": true,
+			"anim": {
+				"enable": false,
+				"speed": 40,
+				"size_min": 0.1,
+				"sync": false
+			}
+		},
+		"line_linked": {
+			"enable": true,
+			"distance": 150,
+			"color": "#ffffff",
+			"opacity": 0.4,
+			"width": 1
+      },
+	  "move": {
+		  "enable": true,
+		  "speed": 6,
+		  "direction": "none",
+		  "random": false,
+		  "straight": false,
+		  "out_mode": "out",
+		  "attract": {
+			  "enable": false,
+			  "rotateX": 600,
+			  "rotateY": 1200
+		  }
+	  }
+	},
+	"retina_detect": true
+});
+
 </script>
 </html>
