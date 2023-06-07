@@ -1,99 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Dylan Ebert</title>
 	<meta charset="UTF-8">
-    <link rel="icon" href="favicon.ico">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+	<link rel="icon" href="favicon.ico">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+		integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+		integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+		crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
 </head>
 <style>
-html, body {
-	font-family: 'Roboto', sans-serif;
-}
-.publication {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-}
-#header, #about {
-	border-bottom: 1px solid gray;
-}
-#me {
-	max-width: 192px;
-	height: auto;
-	border-radius: 50%;
-}
+	html,
+	body {
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.publication,
+	.project {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	#header,
+	#about {
+		border-bottom: 1px solid gray;
+	}
+
+	#me {
+		max-width: 256px;
+		height: auto;
+	}
 </style>
+
 <body>
-<div class="container">
-	<div id="header">
-		<p class="h3 pt-5 pb-4">Dylan Ebert</p>
-	</div>
-	<div class="pt-5 pb-4" id="about">
-		<div class="row">
-			<div class="col-lg-8">
-				<div class="p-2" id="whoami">
-					<p>I'm a PhD candidate in the <a href="https://lunar.cs.brown.edu" target="_blank">
-						LUNAR</a> (Language Understanding and Representation) lab at
-						Brown University advised by
-						<a href="https://cs.brown.edu/people/epavlick/" target="_blank">Ellie Pavlick</a>.</p>
-					<p>I work on grounded language representations: getting computers to understand
-						language in the context of the world, like people do. My most recent work is
-						on the <a href="https://lunar.cs.brown.edu/nbc" target="_blank">
-						New Brown Corpus</a> dataset, a grounded virtual reality dataset inspired
-						by childhood language acquisition.</p>
-					<p>I'm more broadly interested in NLP, AI, HCI, CogSci, and game/web development.
-						My past projects include
-						<a href="https://www.aclweb.org/anthology/W19-2918.pdf" target="_blank">using
-						grounded representations to study theories of concepts</a>,
-						<a href="https://dl.acm.org/doi/pdf/10.1145/2910674.2910681" target="_blank">
-						virtual reality for language learning</a>, and
-						<a href="https://dl.acm.org/doi/abs/10.1145/3025171.3025213" target="_blank">
-						deep learning-driven interfaces</a>.
-					<p class="mt-5">Contact: <a href="mailto:dylan_ebert@brown.edu">dylan_ebert@brown.edu</a></p>
+	<div class="container">
+		<div id="header">
+			<p class="h3 pt-5 pb-4">Dylan Ebert</p>
+		</div>
+		<div class="pt-5 pb-4" id="about">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="p-2" id="whoami">
+						<p>I'm a Developer Advocate Engineer at <a href="https://huggingface.co" target="_blank">Hugging
+								Face</a> with a PhD in Computer Science from Brown University.
+						<p>My work lies at the
+							intersection of AI, game development, and communication.</p>
+						<p class="mt-5">Feel free to contact me on <a href="https://linktr.ee/individualkex">social
+								media</a> or via <a href="mailto:dylan.ebert@gmail.edu">email</a>.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4 text-center">
+					<img class="p-4" src="me.jpg" id="me">
 				</div>
 			</div>
-			<div class="col-lg-4 text-center">
-				<img class="p-4" src="me.jpg" id="me">
+		</div>
+		<div class="my-5">
+			<p class="h4">Highlighted Projects</p>
+			<div class="project">
+				<p class="m-0"><a href="https://store.steampowered.com/app/693940/Orrstead/" target="_blank">
+						Orrstead</a></p>
+				<p class="m-0"><i>Solo Passion Project</i></p>
+				<p class="mt-1">A city-building game using Unity, showcasing my passion and proficiency in game
+					development.</p>
+			</div>
+			<div class="project">
+				<p class="m-0"><a href="https://linktr.ee/individualkex" target="_blank">
+						IndividualKex</a></p>
+				<p class="m-0"><i>Content Creation</i></p>
+				<p class="mt-1">A platform where I create educational content on game development and AI to an audience
+					of over 200k followers on TikTok and YouTube.</p>
+			</div>
+			<div class="project">
+				<p class="m-0"><a href="https://huggingface.co/blog/unity-api" target="_blank">
+						Hugging Face Unity API</a>
+				<p class="m-0"><i>Open-Source Tools</i></p>
+				<p class="mt-1">An example of my contributions to the AI community through the development of
+					open-source
+					tools.</p>
+			</div>
+		</div>
+		<div class="my-5" id="publications">
+			<p class="h4">Highlighted Publications</p>
+			<div class="publication">
+				<p class="m-0"><a href="https://arxiv.org/pdf/2206.11953.pdf" target="_blank">
+						Do Trajectories Encode Verb Meaning?</a></p>
+				<p class="m-0"><i>Dylan Ebert, Chen Sun, Ellie Pavlick</i></p>
+				<p class="mt-1">Thesis research on using data from simulated environments to represent verb meaning.</p>
+			</div>
+			<div class="publication">
+				<p class="m-0"><a href="https://dl.acm.org/doi/abs/10.1145/3025171.3025213" target="_blank">
+						Cognilearn: A Deep Learning-based Interface for Cognitive Behavior Assessment</a></p>
+				<p class="m-0"><i>Srujana Gattupalli, Dylan Ebert, Michalis Papakostas, Fillia Makedon, Vassilis
+						Athitsos</i></p>
+				<p class="mt-1">Early work at the intersection of UI/UX, AI, and HCI that won <i>Best Student Paper
+						Award</i>.</p>
+			</div>
+			<div class="publication">
+				<p class="m-0"><a href="https://dl.acm.org/doi/abs/10.1145/2910674.2910681" target="_blank">
+						Ogma: A Virtual Reality Language Acquisition System</a></p>
+				<p class="m-0"><i>Dylan Ebert, Sanika Gupta, Fillia Makedon</i></p>
+				<p class="mt-1">Early research in VR for immersive language learning.</p>
 			</div>
 		</div>
 	</div>
-	<div class="my-5" id="publications">
-		<p class="h4">Publications</p>
-		<p class="h5 mt-5">2020</p>
-		<div class="publication">
-			<p class="m-0"><a href="http://arxiv.org/abs/2010.15225" target="_blank">
-				A Visuospatial Dataset for Naturalistic Verb Learning</a></p>
-			<p class="m-0">Dylan Ebert, Ellie Pavlick</p>
-			<p class="m-0"><i>*SEM 2020</i></p>
-		</div>
-		<p class="h5 mt-5">2019</p>
-		<div class="publication">
-			<p class="m-0"><a href="https://www.aclweb.org/anthology/W19-2918.pdf" target="_blank">
-				Using Grounded Word Representations to Study Theories of Lexical Concepts</a></p>
-			<p class="m-0">Dylan Ebert, Ellie Pavlick</p>
-			<p class="m-0">CMCL Workshop (NAACL) 2019</p>
-		</div>
-		<p class="h5 mt-5">2017</p>
-		<div class="publication">
-			<p class="m-0"><a href="https://dl.acm.org/doi/abs/10.1145/3025171.3025213" target="_blank">
-				Cognilearn: A Deep Learning-based Interface for Cognitive Behavior Assessment</a></p>
-			<p class="m-0">Srujana Gattupalli, Dylan Ebert, Michalis Papakostas, Fillia Makedon, Vassilis Athitsos</p>
-			<p class="m-0">IUI 2017</p>
-			<p><i>Won Best Student Paper Award</i></p>
-		</div>
-		<p class="h5 mt-5">2016</p>
-		<div class="publication">
-			<p class="m-0"><a href="https://dl.acm.org/doi/abs/10.1145/2910674.2910681" target="_blank">
-				Ogma: A Virtual Reality Language Acquisition System</a></p>
-			<p class="m-0">Dylan Ebert, Sanika Gupta, Fillia Makedon</p>
-			<p class="m-0">PETRA 2016</p>
-		</div>
-	</div>
-</div>
 </body>
+
 </html>
