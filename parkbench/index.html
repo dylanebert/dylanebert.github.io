@@ -71,7 +71,8 @@ table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: 1
 th, td { text-align: left; padding: 8px 0; border-bottom: 1px solid #ececec; vertical-align: top; }
 th { font-family: "Outfit", sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #9a9a9a; }
 td.num, th.num { text-align: right; white-space: nowrap; padding-left: 16px; }
-td.note { color: #6b6b6b; padding-left: 16px; }
+td.note { color: #6b6b6b; }
+.note { padding-left: 16px; }
 
 .join {
     display: inline-block;
@@ -93,7 +94,7 @@ footer { font-size: 15px; color: #9a9a9a; margin-top: 64px; }
     main { padding: 56px 20px 80px; }
     h1 { font-size: 28px; }
     .lede { font-size: 19px; }
-    td.note { display: none; }
+    .note { display: none; }
 }
 </style>
 </head>
@@ -119,7 +120,7 @@ footer { font-size: 15px; color: #9a9a9a; margin-top: 64px; }
     <h2>What we've seen so far</h2>
     <p>The first park copies RollerCoaster Tycoon's Dinky Park: six small rides, $10,000 in cash and a $10,000 loan.</p>
     <table>
-        <thead><tr><th>Player</th><th class="num">Year's profit</th><th class="num note">Rides built</th></tr></thead>
+        <thead><tr><th>Player</th><th class="num">Year's profit</th><th class="note">Rides built</th></tr></thead>
         <tbody>
             <tr><td>A bot that does nothing</td><td class="num">$175</td><td class="note">—</td></tr>
             <tr><td>Jev, choosing each week</td><td class="num">$8,949</td><td class="note">none in 10 runs</td></tr>
@@ -127,7 +128,7 @@ footer { font-size: 15px; color: #9a9a9a; margin-top: 64px; }
         </tbody>
     </table>
     <p>Each profit is averaged over ten games. They raise prices, take loans and hire staff, and stop there. Yet building pays: adding one $427 Haunted House to a GPT-6 Luna bot made it about $600 more over the year (standard error $376).</p>
-    <p>The one player that did build was gaming an earlier score. We first scored company value, and the game counts a ride's value even when it's closed. In a single run, Claude Opus 5.5 found that: its bot built about 240 rides in a year and lost $19,285 in cash. That is one run, not a result, and it is why the score is now profit.</p>
+    <p>The one player that did build was gaming an earlier score. We first scored company value, and the game counts a ride's value even when it's closed. In a single run under that score, Claude Opus 5.5 rehearsed its way to $1.46 million in company value; its bot built about 240 rides in a year and lost $19,285 in cash. That is one run, not a result, and it is why the score is now profit.</p>
 </section>
 
 <section>
