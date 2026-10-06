@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParkBench</title>
+<meta name="description" content="AI players are handed a theme park. They run what's there and never build.">
+<link rel="icon" href="../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Outfit:wght@500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 18px;
+    font-optical-sizing: auto;
+    background: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+main { max-width: 760px; margin: 0 auto; padding: 96px 24px 120px; }
+
+a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-decoration-color: #cbcbcb;
+    transition: text-decoration-color 0.15s;
+}
+a:hover { text-decoration-color: #1a1a1a; }
+strong { font-weight: 600; }
+
+.eyebrow, h2 {
+    font-family: "Outfit", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #9a9a9a;
+}
+
+h1 {
+    font-family: "Outfit", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    color: #111111;
+    margin: 10px 0 14px;
+}
+
+.lede { font-size: 21px; font-style: italic; margin-bottom: 36px; }
+
+figure { margin: 0 0 44px; }
+video { display: block; width: 100%; height: auto; border-radius: 3px; background: #0f1720; }
+figcaption { font-size: 15px; color: #6b6b6b; margin-top: 10px; line-height: 1.5; }
+
+section { margin-bottom: 44px; }
+h2 { margin-bottom: 16px; }
+p { margin-bottom: 16px; }
+p:last-child { margin-bottom: 0; }
+
+table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: 17px; }
+th, td { text-align: left; padding: 8px 0; border-bottom: 1px solid #ececec; vertical-align: top; }
+th { font-family: "Outfit", sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #9a9a9a; }
+td.num, th.num { text-align: right; white-space: nowrap; padding-left: 16px; }
+td.note { color: #6b6b6b; padding-left: 16px; }
+
+.join {
+    display: inline-block;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    background: #1a1a1a;
+    padding: 10px 18px;
+    border-radius: 3px;
+}
+.join:hover { background: #3a3a3a; }
+
+footer { font-size: 15px; color: #9a9a9a; margin-top: 64px; }
+
+@media (max-width: 560px) {
+    body { font-size: 17px; }
+    main { padding: 56px 20px 80px; }
+    h1 { font-size: 28px; }
+    .lede { font-size: 19px; }
+    td.note { display: none; }
+}
+</style>
+</head>
+<body>
+<main>
+
+<p class="eyebrow">ParkBench · work in progress</p>
+<h1>AI players run the park they're given. They don't build.</h1>
+<p class="lede">We hand AI a theme park in RollerCoaster Tycoon 2 and a year to make money. So far, the players we've scored have managed what was already there, and never built a ride.</p>
+
+<figure>
+    <video src="jev-week12.mp4" poster="jev-week12.jpg" controls muted loop playsinline preload="metadata"></video>
+    <figcaption>Jev, a small decision model, chooses one move a week. The panel shows its probabilities: <em>Build</em> sits at 0.04. A ride it could afford, on a site already checked, was offered every week, and in ten runs it never took one.</figcaption>
+</figure>
+
+<section>
+    <h2>The game</h2>
+    <p>ParkBench is <a href="https://openrct2.io" target="_blank" rel="noopener">OpenRCT2</a> driven by a program through a shell. The player sees what a human player could see, in the game's own words and numbers, and can do what a human player could do: set prices, hire staff, take out a loan, build a ride.</p>
+    <p>An AI coding agent gets the park and the tool, and writes a <strong>bot</strong>: ordinary code that plays one in-game year without calling any model. The bot's score is the year's profit, less what the agent spent writing it. Every run replays exactly from its record.</p>
+</section>
+
+<section>
+    <h2>What we've seen so far</h2>
+    <p>The first park copies RollerCoaster Tycoon's Dinky Park: six small rides, $10,000 in cash and a $10,000 loan.</p>
+    <table>
+        <thead><tr><th>Player</th><th class="num">Year's profit</th><th class="num note">Rides built</th></tr></thead>
+        <tbody>
+            <tr><td>A bot that does nothing</td><td class="num">$175</td><td class="note">—</td></tr>
+            <tr><td>Jev, choosing each week</td><td class="num">$8,949</td><td class="note">none in 10 runs</td></tr>
+            <tr><td>Bots written by GPT-6 Luna</td><td class="num">$18,380</td><td class="note">none in 10 rounds</td></tr>
+        </tbody>
+    </table>
+    <p>Each profit is averaged over ten games. They raise prices, take loans and hire staff, and stop there. Yet building pays: adding one $427 Haunted House to a GPT-6 Luna bot made it about $600 more over the year (standard error $376).</p>
+    <p>The one player that did build was gaming an earlier score. We first scored company value, and the game counts a ride's value even when it's closed. In a single run, Claude Opus 5.5 found that: its bot built about 240 rides in a year and lost $19,285 in cash. That is one run, not a result, and it is why the score is now profit.</p>
+</section>
+
+<section>
+    <h2>The paper</h2>
+    <p>We're writing it now: how intelligence is best spent while a bot is being written, with popular models compared through one harness and each of its parts tested by taking it away.</p>
+    <p><a class="join" href="DISCORD_INVITE" target="_blank" rel="noopener">Join the Discord</a></p>
+</section>
+
+<footer>By <a href="../">Dylan Ebert</a>. RollerCoaster Tycoon is a trademark of its respective owners; ParkBench is not affiliated with them.</footer>
+
+</main>
+</body>
+</html>
