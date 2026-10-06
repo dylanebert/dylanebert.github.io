@@ -103,11 +103,11 @@ footer { font-size: 15px; color: #9a9a9a; margin-top: 64px; }
 
 <p class="eyebrow">ParkBench · work in progress</p>
 <h1>AI players run the park they're given. They don't build.</h1>
-<p class="lede">We hand AI a theme park in RollerCoaster Tycoon 2 and a year to make money. So far, the players we've scored have managed what was already there, and never built a ride.</p>
+<p class="lede">We hand AI a theme park in RollerCoaster Tycoon 2 and a year to make money. So far, every player we've scored on profit has managed what was already there and never built a ride.</p>
 
 <figure>
     <video src="jev-week12.mp4" poster="jev-week12.jpg" controls muted loop playsinline preload="metadata"></video>
-    <figcaption>Jev, a small decision model, chooses one move a week. The panel shows its probabilities: <em>Build</em> sits at 0.04. A ride it could afford, on a site already checked, was offered every week, and in ten runs it never took one.</figcaption>
+    <figcaption>Jev, a cheap decision model, chooses one move a week. The panel shows its probabilities: <em>Build</em> sits at 0.04. A ride the game had already accepted in a rehearsal, on a checked site, was offered every week, and in ten runs it never took one.</figcaption>
 </figure>
 
 <section>
@@ -127,7 +127,7 @@ footer { font-size: 15px; color: #9a9a9a; margin-top: 64px; }
             <tr><td>Bots written by GPT-6 Luna</td><td class="num">$18,380</td><td class="note">none in 10 rounds</td></tr>
         </tbody>
     </table>
-    <p>Each profit is averaged over ten games. They raise prices, take loans and hire staff, and stop there. Yet building pays: adding one $427 Haunted House to a GPT-6 Luna bot made it about $600 more over the year (standard error $376).</p>
+    <p>Each profit is averaged over ten games, and GPT-6 Luna's over three bots. They raise prices, take loans and hire staff, and stop there. Yet building pays: adding one $427 Haunted House to a GPT-6 Luna bot made it about $600 more over the year (standard error $376).</p>
     <p>The one player that did build was gaming an earlier score. We first scored company value, and the game counts a ride's value even when it's closed. In a single run under that score, Claude Opus 5.5 rehearsed its way to $1.46 million in company value; its bot built about 240 rides in a year and lost $19,285 in cash. That is one run, not a result, and it is why the score is now profit.</p>
 </section>
 
