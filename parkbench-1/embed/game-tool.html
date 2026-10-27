@@ -1,0 +1,126 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="../"><title>game-tool</title><template id="figure-fonts"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet"></template><style>:root{--accent:#8000FF;--grey:#616161;font-family:Roboto,ui-sans-serif,system-ui,sans-serif;color:#000;background:#fff;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}body{margin:0}
+:root{--figure-body:16px;--figure-label:max(12px,calc(var(--figure-body)*.75));--figure-annotation:calc(var(--figure-body)*.8);--figure-focus:calc(var(--figure-body)*.8);--figure-quote:calc(var(--figure-body)*.9)}
+@media(min-width:768px){:root{--figure-body:18px}}
+@media(min-width:1280px){:root{--figure-body:20px}}
+.post{max-width:1440px;margin:0 auto;padding:60px 20px 96px}
+.post>header{margin-bottom:40px}
+.kicker{display:inline-block;margin:0 0 12px;font-size:20px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;background:linear-gradient(to right,#8000FF,#00E37D);-webkit-background-clip:text;background-clip:text;color:transparent}
+.meta{margin:24px 0 0;border-top:1px solid #c7c7c7;font-size:16px}.meta div{display:flex;justify-content:space-between;padding:8px 0;line-height:24px;border-bottom:1px solid #c7c7c7}.meta div:last-child{border-bottom:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:32px 0 0;padding:0;list-style:none}.tags li{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:15px;text-transform:uppercase;background:#efefef;border-radius:3px;padding:3px 8px;box-shadow:0 1px 2px rgba(0,0,0,.25)}.meta span{text-transform:uppercase;color:#323232}.meta b{font-weight:700}
+.hero{display:block;width:100%;height:auto;margin:40px 0 0;aspect-ratio:1280/650;object-fit:cover;border-radius:8px}
+.author{display:flex;align-items:center;gap:16px;margin:0 0 40px;font-size:16px;font-weight:700}.author img{width:48px;height:48px;border-radius:9999px;object-fit:cover}
+.layout{display:block}.toc{display:none}
+h1{font-size:32px;line-height:1.05;letter-spacing:-.01em;font-weight:700;margin:0}
+h2{font-size:24px;line-height:1.1;letter-spacing:-.01em;font-weight:700;margin:48px 0 12px;scroll-margin-top:24px}
+h3{font-size:18px;line-height:1.1;font-weight:700;margin:28px 0 12px}
+p{font-size:16px;line-height:22px;margin:0 0 16px}
+ul{margin:0 0 16px;padding-left:24px}li{font-size:16px;line-height:22px;margin:0 0 12px}
+strong.company-value{font-weight:700;color:var(--accent)}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:.75em;color:var(--grey);background:#efefef;border-radius:4px;padding:.2em .4em}
+figure{margin:32px 0;isolation:isolate}
+figure img{display:block;width:100%;height:auto;border-radius:8px}
+figcaption{margin-top:16px;padding:0 24px;font-size:14px;line-height:18px;font-style:italic;color:var(--grey);text-align:center}
+.reserved{height:160px;display:flex;align-items:center;justify-content:center;border:1px dashed #bbb;border-radius:8px;background:#f2f2f2;font-size:14px;color:var(--grey)}
+@media(min-width:768px){.post{padding:72px 45px 120px}h1{font-size:34px}h2{font-size:26px}h3{font-size:20px;margin-top:36px}p,li{font-size:18px;line-height:26px}figcaption{font-size:15px;line-height:20px;padding:0 60px}}
+@media(min-width:1024px){.layout{display:grid;grid-template-columns:200px minmax(0,528px);column-gap:44px}.toc{display:block;position:sticky;top:24px;align-self:start;border-top:1px solid #000;padding-top:20px;font-size:14px;line-height:20px}.toc strong{display:block;margin-bottom:20px}.toc a{display:block;color:#000;border-left:2px solid #e5e5e5;padding:2px 0 2px 12px}.toc a:hover{color:var(--accent);text-decoration:none}article figure{width:calc(100% + 81px)}h2{margin-bottom:16px}}
+@media(min-width:1024px){.top{display:grid;grid-template-columns:minmax(0,950px) 290px;justify-content:space-between;column-gap:40px;align-items:start}.meta{margin:0}}
+@media(min-width:1280px){.post{padding:80px 80px 140px}h1{font-size:36px}h2{font-size:28px}h3{font-size:22px}p,li{font-size:20px;line-height:28px}figcaption{font-size:16px;line-height:22px}.layout{grid-template-columns:250px minmax(0,730px);column-gap:80px}article figure{width:840px}}
+html,body{margin:0;background:#fff;height:100%}.embed-live>figure{margin:0!important;width:100%!important}.embed-live{display:none;min-height:100vh}.embed-fallback img{width:100%;height:100%;object-fit:contain;object-position:top center;display:block;border-radius:0}.embed-fallback picture{display:block;height:100%}.embed-fallback{margin:0;height:100vh}body[data-live] .embed-live{display:block}body[data-live] .embed-fallback{display:none}:root{--figure-body:16px}@media(min-width:400px){:root{--figure-body:18px}}@media(min-width:600px){:root{--figure-body:20px}}
+</style></head><body data-render-mode="still"><div class="embed-fallback"><picture><source media="(max-width:400px)" srcset="visuals/game-tool-embed-mobile.png"><source media="(max-width:600px)" srcset="visuals/game-tool-embed-tablet.png"><img src="visuals/game-tool-embed.png" alt="The park behind three terminal commands and their replies."></picture></div><div class="embed-live"><figure class="game-tool" aria-label="The park behind three terminal commands and their replies.">
+<style>
+.game-tool{width:100%;font-size:var(--figure-annotation);line-height:1.4}
+.game-tool figcaption{font-size:var(--figure-label);line-height:1.4;padding:0}
+.game-tool .stage{position:relative;isolation:isolate;aspect-ratio:8/5;border-radius:8px;overflow:hidden;background:#08120e}
+.game-tool .park{position:absolute;top:50%;left:0;transform:translateY(-50%);width:100%;height:auto;aspect-ratio:8/5;object-fit:contain;border-radius:0;z-index:-1}
+.game-tool .terminal{position:absolute;inset:0;width:100%;height:100%;overflow:auto;overflow-anchor:none;padding:24px;color:#fff;background:rgba(8,18,14,.57);font:12px/1.45 Menlo,"DejaVu Sans Mono","Liberation Mono",monospace;font-variant-ligatures:none}
+.game-tool[data-state="typing"] .terminal,.game-tool[data-state="playing"] .terminal{right:auto;bottom:auto;width:max-content;height:auto;max-width:100%;max-height:100%}
+.game-tool[data-state="playing"] .reply{display:none}
+.game-tool[data-state="playing"] .command,.game-tool[data-state="typing"] .command{margin-bottom:0}
+.game-tool .command{color:#b9ffbd;white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 18px;font:inherit;min-height:1.45em}
+.game-tool .reply{margin:0;font:inherit;white-space:normal;overflow-wrap:anywhere}
+.game-tool .line{display:block;min-height:1.45em}
+.game-tool .cell{display:inline-block;width:1ch;white-space:pre;text-align:center}
+.game-tool .controls{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:10px;font:var(--figure-label)/1.5 Roboto,sans-serif}
+.game-tool button{font:inherit;color:#18271c;background:none;border:0;padding:6px 10px;cursor:pointer;min-height:32px}
+.game-tool button:disabled{opacity:.3;cursor:default}.game-tool button:focus-visible{outline:2px solid #8000ff}
+.game-tool .position{font-variant-numeric:tabular-nums;color:#616161}
+@media(max-width:600px){.game-tool .terminal{padding:14px;font-size:10px}}
+</style>
+<div class="stage"><img class="park" src="visuals/game-tool/park-000.png" alt="The park behind three terminal commands and their replies."><div class="terminal" tabindex="0" aria-label="Command and reply; scroll to read more"><pre class="command"></pre><pre class="reply" aria-live="polite"></pre></div></div>
+<div class="controls"><button type="button" class="previous" aria-label="Previous command">←</button><span class="position" aria-live="polite"></span><button type="button" class="next" aria-label="Next command">→</button></div>
+<noscript><style>.game-tool .stage,.game-tool .controls{display:none}</style><picture><source media="(max-width:600px)" srcset="visuals/game-tool-mobile.png"><img class="still" src="visuals/game-tool.png" alt="The park behind three terminal commands and their replies."></picture></noscript>
+<figcaption>Luna's commands and the game's replies.</figcaption>
+<script type="text/plain" data-activate>(()=>{
+const steps=[{"command":"pb observe park","reply":"open: Park open\nentrance: (2144,1824) facing -x\nrating: 577\ncash: $10,000.00\nguests: 157 guests\nobjective: None\nweather: Partially Cloudy\ntemperature: 17°C\n","frames":["park-000.png"]},{"command":"pb observe tiles","reply":"Rectangle: x=1568..2144, y=1600..2240 map units (19 columns × 21 rows)\nCell: 32 map units; x increases rightward, y increases downward. Directions: 0 = -x, 1 = +y, 2 = +x, 3 = -y.\n        1568      1888         x (map units)\ny=1600 | .....*.......*... \ny=1632 | ..........RRR.**. \ny=1664 | ..*...*...RRR...* \ny=1696 | .┌───────┐RRRx──┐ \ny=1728 | .x.*.....│n....*│ \ny=1760 | RRR..*..*│┃....*│ \ny=1792 | RRR......│┃.....│E\ny=1824 | RRR.....*│┃....┌┴E\ny=1856 | ..n.....┌┴┴┬───┘.E\ny=1888 |.*.┗━━━━━┤*.┃..... \ny=1920 |.........│.*┃..    \ny=1952 |.......**│..┃.*  ┌┬\ny=1984 |.*...┌───┤*.n.*  ├┼\ny=2016 |R....│.**├┬xRR.  ├┤\ny=2048 |Rn━━━┤...│┗┓RR*  ├┤\ny=2080 |R....│*..x.┗┓..  ├┤\ny=2112 |Rx───┼┓.RRRn┛.*  ├┤\ny=2144 |R....│┃.RRR....  ├┤\ny=2176 |*....│┃.RRR*..*  ├┤\ny=2208 |*.*.*xn........  ├┤\ny=2240 |...*.RRRR.....*  ├┤\nLegend:\n╴╵╶╷─│┌┐└┘├┤┬┴┼ = paths (light connections)\n╸╹╺╻━┃┏┓┗┛┣┫┳┻╋ = queues (heavy connections)\nn = ride entrance\nx = ride exit\n* = scenery (small and large)\nR = ride\nE = park entrance\n. = owned land\n  space = unowned land\n","frames":["park-000.png"]},{"command":"pb advance 16384","reply":"advanced: 16384\ntick: 41623\n","frames":["park-001.png","park-002.png","park-003.png","park-004.png","park-005.png","park-006.png","park-007.png","park-008.png","park-009.png","park-010.png","park-011.png","park-012.png","park-013.png","park-014.png","park-015.png","park-016.png","park-017.png","park-018.png","park-019.png","park-020.png","park-021.png","park-022.png","park-023.png","park-024.png","park-025.png","park-026.png","park-027.png","park-028.png","park-029.png","park-030.png","park-031.png","park-032.png"]}];
+const figure=document.currentScript.closest('figure');
+const image=figure.querySelector('.park'), command=figure.querySelector('.command'), reply=figure.querySelector('.reply');
+const previous=figure.querySelector('.previous'), next=figure.querySelector('.next'), position=figure.querySelector('.position');
+let index=0, timer;
+function show(){
+  clearTimeout(timer);
+  const step=steps[index], shownCommand=step.command.replace(/^pb /,'');
+  image.src='visuals/game-tool/'+step.frames[0];
+  command.textContent='$ ';reply.replaceChildren();figure.dataset.state='typing';
+  figure.querySelector('.terminal').scrollTop=0;
+  previous.disabled=index===0;next.disabled=index===steps.length-1;
+  position.textContent=(index+1)+' / '+steps.length;
+  let typed=0;
+  function type(){
+    command.textContent='$ '+shownCommand.slice(0,++typed);
+    if(typed<shownCommand.length){timer=setTimeout(type,24);return;}
+    timer=setTimeout(reveal,220);
+  }
+  function reveal(){
+    if(step.frames.length===1){stream();return;}
+    figure.dataset.state='playing';
+    let frame=0;
+    function advance(){
+      if(++frame>=step.frames.length){stream();return;}
+      image.src='visuals/game-tool/'+step.frames[frame];
+      timer=setTimeout(advance,160);
+    }
+    timer=setTimeout(advance,160);
+  }
+  function stream(){
+    figure.dataset.state='streaming';
+    let offset=0, line;
+    function print(){
+      const end=Math.min(offset+16,step.reply.length);
+      for(;offset<end;offset++){
+        const char=step.reply[offset];
+        if(char==='\n'){reply.append('\n');line=null;continue;}
+        if(!line){line=document.createElement('span');line.className='line';reply.append(line);}
+        const cell=document.createElement('span');cell.className='cell';cell.textContent=char;line.append(cell);
+      }
+      if(offset<step.reply.length)timer=setTimeout(print,20);
+      else figure.dataset.state='complete';
+    }
+    print();
+  }
+  type();
+}
+previous.onclick=()=>{index=Math.max(0,index-1);show();};
+next.onclick=()=>{index=Math.min(steps.length-1,index+1);show();};
+for(const step of steps)for(const src of step.frames){const preload=new Image();preload.src='visuals/game-tool/'+src;}
+show();
+})();</script></figure></div><script>
+(async()=>{
+  document.body.dataset.renderMode='pending';
+  const still=()=>{document.body.dataset.renderMode='still';};
+  if(new URLSearchParams(location.search).has('still'))return still();
+  try{if(!navigator.gpu||!(function hardwareAdapter(adapter) {
+  if (!adapter || adapter.info?.isFallbackAdapter)
+    return !1;
+  const info = adapter.info, identity = [info?.vendor, info?.architecture, info?.device, info?.description].join(" ").toLowerCase();
+  return !["swiftshader", "llvmpipe", "lavapipe", "softpipe", "basic render", "software adapter", "software rasterizer", "microsoft basic"].some((marker) => identity.includes(marker));
+})(await navigator.gpu.requestAdapter()))return still();}catch{return still();}
+  // A still needs no web fonts or their render-blocking stylesheet.
+  document.head.append(document.querySelector('#figure-fonts').content);
+  document.body.dataset.live='true';
+  document.body.dataset.renderMode='live';
+  for(const original of document.querySelectorAll('script[data-activate]')){
+    const script=document.createElement('script');script.textContent=original.textContent;original.replaceWith(script);
+  }
+})();</script></body></html>
