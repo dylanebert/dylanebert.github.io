@@ -28,6 +28,7 @@ figcaption{margin-top:16px;padding:0 24px;font-size:14px;line-height:18px;font-s
 @media(min-width:1024px){.top{display:grid;grid-template-columns:minmax(0,950px) 290px;justify-content:space-between;column-gap:40px;align-items:start}.meta{margin:0}}
 @media(min-width:1280px){.post{padding:80px 80px 140px}h1{font-size:36px}h2{font-size:28px}h3{font-size:22px}p,li{font-size:20px;line-height:28px}figcaption{font-size:16px;line-height:22px}.layout{grid-template-columns:250px minmax(0,730px);column-gap:80px}article figure{width:840px}}
 html,body{margin:0;background:#fff;height:100%}.embed-live>figure{margin:0!important;width:100%!important}.embed-live{display:none;min-height:100vh}.embed-fallback img{width:100%;height:100%;object-fit:contain;object-position:top center;display:block;border-radius:0}.embed-fallback picture{display:block;height:100%}.embed-fallback{margin:0;height:100vh}body[data-live] .embed-live{display:block}body[data-live] .embed-fallback{display:none}:root{--figure-body:16px}@media(min-width:400px){:root{--figure-body:18px}}@media(min-width:600px){:root{--figure-body:20px}}
+
 </style></head><body data-render-mode="still"><div class="embed-fallback"><picture><source media="(max-width:400px)" srcset="visuals/game-tool-embed-mobile.png"><source media="(max-width:600px)" srcset="visuals/game-tool-embed-tablet.png"><img src="visuals/game-tool-embed.png" alt="The park behind three terminal commands and their replies."></picture></div><div class="embed-live"><figure class="game-tool" aria-label="The park behind three terminal commands and their replies.">
 <style>
 .game-tool{width:100%;font-size:var(--figure-annotation);line-height:1.4}
@@ -109,13 +110,15 @@ show();
 (async()=>{
   document.body.dataset.renderMode='pending';
   const still=()=>{document.body.dataset.renderMode='still';};
-  if(new URLSearchParams(location.search).has('still'))return still();
-  try{if(!navigator.gpu||!(function hardwareAdapter(adapter) {
+  if(!false){
+    if(new URLSearchParams(location.search).has('still'))return still();
+    try{if(!navigator.gpu||!(function hardwareAdapter(adapter) {
   if (!adapter || adapter.info?.isFallbackAdapter)
     return !1;
   const info = adapter.info, identity = [info?.vendor, info?.architecture, info?.device, info?.description].join(" ").toLowerCase();
   return !["swiftshader", "llvmpipe", "lavapipe", "softpipe", "basic render", "software adapter", "software rasterizer", "microsoft basic"].some((marker) => identity.includes(marker));
 })(await navigator.gpu.requestAdapter()))return still();}catch{return still();}
+  }
   // A still needs no web fonts or their render-blocking stylesheet.
   document.head.append(document.querySelector('#figure-fonts').content);
   document.body.dataset.live='true';
